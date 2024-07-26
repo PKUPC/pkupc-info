@@ -30,11 +30,11 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          editUrl: 'https://github.com/kinami0331/pnku-info',
+          editUrl: 'https://github.com/kinami0331/pnku-info/blob/main/',
         },
         blog: {
           showReadingTime: true,
-          editUrl: 'https://github.com/kinami0331/pnku-info',
+          editUrl: 'https://github.com/kinami0331/pnku-info/blob/main/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -61,7 +61,7 @@ const config: Config = {
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://kinami0331.github.io/pnku-info/',
+          href: 'https://github.com/kinami0331/pnku-info',
           label: 'GitHub',
           position: 'right',
         },
@@ -110,7 +110,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} P&KU TEAM. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
