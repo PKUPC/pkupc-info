@@ -30,6 +30,8 @@ jobs:
         run: pnpm install
 
       - name: Build website
+        env:
+          GITHUB_PAGE_MODE: "true"
         run: pnpm build
 
       - name: Upload Build Artifact
