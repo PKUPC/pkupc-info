@@ -77,7 +77,7 @@ const config: Config = {
                     items: [
                         {
                             label: '活动资料',
-                            to: '/docs/intro',
+                            to: '/docs/关于',
                         },
                         {
                             label: '文章',
