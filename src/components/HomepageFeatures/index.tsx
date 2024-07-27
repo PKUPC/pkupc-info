@@ -4,11 +4,12 @@ import styles from './styles.module.css';
 import mountainSvg from '@site/static/img/undraw_docusaurus_mountain.svg';
 import treeSvg from '@site/static/img/undraw_docusaurus_tree.svg';
 import reactSvg from '@site/static/img/undraw_docusaurus_react.svg';
+import React from 'react';
 
 type FeatureItem = {
     title: string;
     Svg: React.ComponentType<React.ComponentProps<'svg'>>;
-    description: JSX.Element;
+    description: React.ReactNode;
 };
 
 const FeatureList: FeatureItem[] = [
@@ -58,7 +59,7 @@ function Feature({ title, Svg, description }: FeatureItem) {
     );
 }
 
-export default function HomepageFeatures(): JSX.Element {
+export default function HomepageFeatures(): React.ReactNode {
     return (
         <section className={styles.features}>
             <div className="container">
