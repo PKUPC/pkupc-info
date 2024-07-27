@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "plugin:@docusaurus/recommended"
+  ],
+  "rules": {
+    "@docusaurus/no-untranslated-text": "warn",
+    "@docusaurus/string-literal-i18n-messages": "warn"
+  }
+}
