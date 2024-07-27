@@ -15,3 +15,9 @@ slorber:
   title: Docusaurus maintainer
   url: https://sebastienlorber.com
   image_url: https://github.com/slorber.png
+
+winfrid:
+  name: Winfrid
+  title: P&KU 系列总策划
+  #  url: https://github.com/endiliey
+  image_url: /public/avaters/winfrid.jpg
