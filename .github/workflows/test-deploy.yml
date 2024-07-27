@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      
+
       - uses: pnpm/action-setup@v4
         name: Install pnpm
         with:
@@ -25,11 +25,17 @@ jobs:
         with:
           node-version: 20
           cache: 'pnpm'
-      
+
       - name: Install dependencies
         run: pnpm install
-      
+
+      - name: Lint Code
+        run: pnpm run lint
+
+      - name: Typecheck
+        run: pnpm run typecheck
+
       - name: Build website
         env:
-          GITHUB_PAGE_MODE: "true"
+          GITHUB_PAGE_MODE: 'true'
         run: pnpm build
