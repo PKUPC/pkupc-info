@@ -1,9 +1,37 @@
 {
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "node": true
+  },
   "extends": [
-    "plugin:@docusaurus/recommended"
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:@docusaurus/recommended",
+    "plugin:prettier/recommended"
   ],
   "rules": {
-    "@docusaurus/no-untranslated-text": "warn",
-    "@docusaurus/string-literal-i18n-messages": "warn"
-  }
+    "@docusaurus/no-untranslated-text": "off",
+    "@docusaurus/string-literal-i18n-messages": "off",
+    "prettier/prettier": "error",
+    "react/react-in-jsx-scope": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "ignorePatterns": [
+    "node_modules/",
+    "build/",
+    "pnpm-lock.yaml"
+  ]
 }
