@@ -29,6 +29,12 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Lint Code
+        run: pnpm run lint
+
+      - name: Typecheck
+        run: pnpm run typecheck
+
       - name: Build website
         env:
           GITHUB_PAGE_MODE: 'true'
