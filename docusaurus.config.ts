@@ -119,6 +119,14 @@ const config: Config = {
                             label: 'P&KU 2 存档站',
                             href: 'https://pnku2.pkupuzzle.art/',
                         },
+                        {
+                            label: 'P&KU 3 存档站',
+                            href: 'https://pnku3.pkupuzzle.art/',
+                        },
+                        {
+                            label: 'P&KU 3 开放游玩环境',
+                            href: 'https://pnku3-playground.pkupuzzle.art/',
+                        },
                     ],
                 },
             ],
