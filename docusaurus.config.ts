@@ -79,11 +79,15 @@ const config: Config = {
             style: 'dark',
             links: [
                 {
-                    title: '资料',
+                    title: '内容',
                     items: [
                         {
                             label: '活动资料',
-                            to: '/docs/关于',
+                            to: '/archive/关于',
+                        },
+                        {
+                            label: '常用工具',
+                            to: '/tools/简介',
                         },
                         {
                             label: '文章',
