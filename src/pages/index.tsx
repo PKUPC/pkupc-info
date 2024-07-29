@@ -27,12 +27,8 @@ function HomepageHeader() {
 }
 
 export default function Home(): React.ReactNode {
-    const { siteConfig } = useDocusaurusContext();
     return (
-        <Layout
-            title={`${siteConfig.title}`}
-            description="这里是 Puzzle and Key Universe 资料站，一起来享受解谜的乐趣吧！"
-        >
+        <Layout title={''} description="这里是 Puzzle and Key Universe 资料站，一起来享受解谜的乐趣吧！">
             <HomepageHeader />
             <main>
                 <HomepageFeatures />
