@@ -42,7 +42,7 @@ function makeAttribute(name: string, value: string | number | undefined) {
 
 const customImage = () => {
     return (tree) => {
-        visit(tree, (node) => {
+        visit(tree, (node, _, parent) => {
             if (node.type === 'mdxJsxTextElement' && node.name === 'img') {
                 const filteredAttrs = node.attributes.filter((item) => item.name === 'src');
                 if (filteredAttrs.length != 1) return; // 神秘情况
@@ -59,6 +59,11 @@ const customImage = () => {
                 node.name = 'CustomImage';
                 node.data = { _mdxExplicitJsx: true };
                 node.attributes = [srcAttr, makeAttribute('width', width)];
+
+                if (parent && parent.tagName === 'p' && parent.children.length === 1) {
+                    Object.keys(parent).forEach((key) => delete parent[key]);
+                    Object.keys(node).forEach((key) => (parent[key] = node[key]));
+                }
             }
             if (node.type === 'element' && node.tagName === 'img') {
                 node.type = 'mdxJsxTextElement';
@@ -67,6 +72,11 @@ const customImage = () => {
                 const matchWidth = node.properties.src.match(/[?&]width=(\d+)/);
                 const width = matchWidth ? matchWidth[1] : undefined;
                 node.attributes = [makeAttribute('src', node.properties.src), makeAttribute('width', width)];
+
+                if (parent && parent.tagName === 'p' && parent.children.length === 1) {
+                    Object.keys(parent).forEach((key) => delete parent[key]);
+                    Object.keys(node).forEach((key) => (parent[key] = node[key]));
+                }
             }
             // if (node.type === 'mdxJsxFlowElement' && node.name === 'CustomImage') {
             //     console.log(node);
