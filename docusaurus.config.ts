@@ -27,6 +27,10 @@ const config: Config = {
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
 
+    markdown: {
+        format: 'detect',
+    },
+
     i18n: {
         defaultLocale: 'zh-Hans',
         locales: ['zh-Hans'],
@@ -91,11 +95,11 @@ const config: Config = {
                     items: [
                         {
                             label: '活动资料',
-                            to: '/archive/关于',
+                            to: '/archive/guan-yu',
                         },
                         {
                             label: '常用工具',
-                            to: '/tools/简介',
+                            to: '/tools/jian-jie',
                         },
                         {
                             label: '文章',

@@ -12,8 +12,6 @@ description: 这是区域【孑孓独行者的开场】的Meta。
 
 ## 答案
 
-
-
 ## 解析
 
 这一分区的题目答案分别为dismast, piperic, ventose,dignity,fratchy，是五个七字母单词。

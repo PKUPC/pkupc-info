@@ -2,11 +2,13 @@
 sidebar_position: 1
 ---
 
+# 照片上的留白
+
 ## 题面
 
 对着这些**已获**得的照片……我望着层层叠叠的它们，以期从其中窥见一丝真相。
 
-[照片上的留白.pptx](./01-照片上的留白.assets/照片上的留白.pptx)
+[照片上的留白.pptx](./01-zhao-pian-shang-de-liu-bai.assets/照片上的留白.pptx)
 
 ## 答案
 
@@ -18,14 +20,14 @@ DISMAST
 
 事实上，我们可以找到这些宝可梦的英文名，然后可以发现正好有一张绿色文字的英文翻译与其相比，恰好少了一个字母。具体如下：
 
-![img](./01-照片上的留白.assets/image1.png)
+![img](./01-zhao-pian-shang-de-liu-bai.assets/image1.png)
 
 于是可以得到答案dismast。
 
 事实上，这种“少了一个字母”是和文本的“层层叠叠”相对应的。如果将对应的图片叠在一起，如：
-<img src={require('./01-照片上的留白.assets/image2.png').default} style={{
-    width: 400, maxWidth: "100%", margin: "auto",
-    display: "block"
+<img src={require('./01-zhao-pian-shang-de-liu-bai.assets/image2.png').default} style={{
+width: 400, maxWidth: "100%", margin: "auto",
+display: "block"
 }} alt="" />
 <br />
 这样的话，黑色部分表示的内容就是“SALANDIT”-“an A list”=D。
