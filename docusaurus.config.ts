@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const githubPageMode = process.env.GITHUB_PAGE_MODE?.toUpperCase() === 'TRUE';
 
 const config: Config = {
-    title: 'Puzzle and Key Universe 资料站',
+    title: 'P&KU 资料站',
     tagline: '一起来享受解谜的乐趣吧！',
     favicon: 'img/favicon.ico',
 
@@ -118,6 +118,14 @@ const config: Config = {
                         {
                             label: 'P&KU 2 存档站',
                             href: 'https://pnku2.pkupuzzle.art/',
+                        },
+                        {
+                            label: 'P&KU 3 存档站',
+                            href: 'https://pnku3.pkupuzzle.art/',
+                        },
+                        {
+                            label: 'P&KU 3 开放游玩环境',
+                            href: 'https://pnku3-playground.pkupuzzle.art/',
                         },
                     ],
                 },

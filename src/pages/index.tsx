@@ -18,7 +18,7 @@ function HomepageHeader() {
                 <p className="hero__subtitle">{siteConfig.tagline}</p>
                 <div className={styles.buttons}>
                     <Link className="button button--secondary button--lg" to="https://pnku3.pkupuzzle.art/home">
-                        刚刚过去的活动：P&KU 3
+                        刚刚过去的活动：P&KU 3（上）
                     </Link>
                 </div>
             </div>
@@ -27,9 +27,8 @@ function HomepageHeader() {
 }
 
 export default function Home(): React.ReactNode {
-    const { siteConfig } = useDocusaurusContext();
     return (
-        <Layout title={`Hello from ${siteConfig.title}`} description="Description will go into a meta tag in <head />">
+        <Layout title={''} description="这里是 Puzzle and Key Universe 资料站，一起来享受解谜的乐趣吧！">
             <HomepageHeader />
             <main>
                 <HomepageFeatures />
