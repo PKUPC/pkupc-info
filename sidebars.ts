@@ -7,7 +7,7 @@ const sidebars: SidebarsConfig = {
             dirName: 'archive',
         },
     ],
-    tools: ['tools/简介'],
+    tools: ['tools/jian-jie'],
 };
 
 export default sidebars;
