@@ -1,8 +1,16 @@
 import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import dotenv from 'dotenv';
+
+dotenv.config({ path: '.env' });
+dotenv.config({ path: '.env.local' });
 
 const githubPageMode = process.env.GITHUB_PAGE_MODE?.toUpperCase() === 'TRUE';
+const beiAnInfo =
+    process.env.BEI_AN_MODE?.toUpperCase() === 'TRUE'
+        ? '<br/><a href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer noopener"\nstyle={{color: "inherit"}}>京ICP备2022031972号-1</a>'
+        : '';
 
 const config: Config = {
     title: 'P&KU 资料站',
@@ -130,7 +138,7 @@ const config: Config = {
                     ],
                 },
             ],
-            copyright: `Copyright © ${new Date().getFullYear()} P&KU TEAM. Built with Docusaurus.`,
+            copyright: `Copyright © ${new Date().getFullYear()} P&KU TEAM. Built with Docusaurus.${beiAnInfo}`,
         },
         prism: {
             theme: prismThemes.github,
