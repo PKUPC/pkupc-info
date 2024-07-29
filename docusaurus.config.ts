@@ -30,7 +30,7 @@ const config: Config = {
             {
                 docs: {
                     path: 'docs',
-                    routeBasePath: 'docs',
+                    routeBasePath: '/',
                     sidebarPath: './sidebars.ts',
                     editUrl: 'https://github.com/kinami0331/pnku-info/blob/main/',
                 },
@@ -60,6 +60,12 @@ const config: Config = {
                     sidebarId: 'archive',
                     position: 'left',
                     label: '活动资料',
+                },
+                {
+                    type: 'docSidebar',
+                    sidebarId: 'tools',
+                    position: 'left',
+                    label: '常用工具',
                 },
                 { to: '/blog', label: '文章', position: 'left' },
                 {
