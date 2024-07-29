@@ -1,16 +1,9 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+pnku:
+  label: P&KU
+  permalink: /pnku
+  description: P&KU 相关内容。
+
+pnku1:
+  label: P&KU 1
+  permalink: /pnku1
+  description: P&KU1 相关内容。
