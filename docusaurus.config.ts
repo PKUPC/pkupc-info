@@ -27,6 +27,10 @@ const config: Config = {
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
 
+    markdown: {
+        format: 'detect',
+    },
+
     i18n: {
         defaultLocale: 'zh-Hans',
         locales: ['zh-Hans'],
