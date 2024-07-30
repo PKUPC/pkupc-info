@@ -58,7 +58,7 @@ const customImage = () => {
                 node.type = 'mdxJsxTextElement';
                 node.name = 'CustomImage';
                 node.data = { _mdxExplicitJsx: true };
-                node.attributes = [srcAttr, makeAttribute('width', width)];
+                node.attributes = [srcAttr, makeAttribute('width', parseInt(width))];
 
                 if (parent && parent.tagName === 'p' && parent.children.length === 1) {
                     Object.keys(parent).forEach((key) => delete parent[key]);
@@ -71,7 +71,7 @@ const customImage = () => {
                 node.data = { _mdxExplicitJsx: true };
                 const matchWidth = node.properties.src.match(/[?&]width=(\d+)/);
                 const width = matchWidth ? matchWidth[1] : undefined;
-                node.attributes = [makeAttribute('src', node.properties.src), makeAttribute('width', width)];
+                node.attributes = [makeAttribute('src', node.properties.src), makeAttribute('width', parseInt(width))];
 
                 if (parent && parent.tagName === 'p' && parent.children.length === 1) {
                     Object.keys(parent).forEach((key) => delete parent[key]);
