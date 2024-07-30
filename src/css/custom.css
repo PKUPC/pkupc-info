@@ -37,3 +37,7 @@
 .text-indent-4 {
     text-indent: 2rem;
 }
+
+.no-margin-p p {
+    margin: 0;
+}
