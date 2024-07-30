@@ -10,11 +10,10 @@ dotenv.config({ path: '.env' });
 dotenv.config({ path: '.env.local' });
 
 const githubPageMode = process.env.GITHUB_PAGE_MODE?.toUpperCase() === 'TRUE';
-const beiAnInfo = '';
-// const beiAnInfo =
-//     process.env.BEI_AN_MODE?.toUpperCase() === 'TRUE'
-//         ? '<br/><a href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer noopener"\nstyle={{color: "inherit"}}>京ICP备2022031972号-1</a>'
-//         : '';
+const beiAnInfo =
+    process.env.BEI_AN_MODE?.toUpperCase() === 'TRUE'
+        ? '<br/><a href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer noopener">京ICP备2022031972号-1</a>'
+        : '';
 
 const config: Config = {
     title: 'P&KU 资料站',
