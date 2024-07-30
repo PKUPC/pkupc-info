@@ -5,7 +5,13 @@ export default function CustomImage({ src, width }: { src: string; width?: numbe
     return (
         <>
             <div className={'flex justify-center'}>
-                <Image src={src} alt={'image' + width} width={width} style={{ maxWidth: '100%' }} />
+                <Image
+                    src={src}
+                    alt={'image'}
+                    width={width}
+                    style={{ maxWidth: '100%' }}
+                    preview={{ getContainer: false }}
+                />
             </div>
             <br />
         </>
