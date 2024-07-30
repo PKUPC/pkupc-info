@@ -11,6 +11,9 @@
 # idea
 .idea
 
+# vscode
+.vscode
+
 # Misc
 .DS_Store
 .env.local

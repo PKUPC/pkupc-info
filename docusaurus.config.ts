@@ -2,15 +2,19 @@ import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import dotenv from 'dotenv';
+import customImage from './src/plugins/customImage';
+import tailwindcss from 'tailwindcss';
+import autoprefixer from 'autoprefixer';
 
 dotenv.config({ path: '.env' });
 dotenv.config({ path: '.env.local' });
 
 const githubPageMode = process.env.GITHUB_PAGE_MODE?.toUpperCase() === 'TRUE';
-const beiAnInfo =
-    process.env.BEI_AN_MODE?.toUpperCase() === 'TRUE'
-        ? '<br/><a href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer noopener"\nstyle={{color: "inherit"}}>京ICP备2022031972号-1</a>'
-        : '';
+const beiAnInfo = '';
+// const beiAnInfo =
+//     process.env.BEI_AN_MODE?.toUpperCase() === 'TRUE'
+//         ? '<br/><a href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer noopener"\nstyle={{color: "inherit"}}>京ICP备2022031972号-1</a>'
+//         : '';
 
 const config: Config = {
     title: 'P&KU 资料站',
@@ -45,6 +49,7 @@ const config: Config = {
                     routeBasePath: '/',
                     sidebarPath: './sidebars.ts',
                     editUrl: 'https://github.com/kinami0331/pnku-info/blob/main/',
+                    rehypePlugins: [customImage],
                 },
                 blog: {
                     showReadingTime: true,
@@ -149,6 +154,19 @@ const config: Config = {
             darkTheme: prismThemes.dracula,
         },
     } satisfies Preset.ThemeConfig,
+
+    plugins: [
+        async function tailwindPlugin() {
+            return {
+                name: 'docusaurus-tailwindcss',
+                configurePostCss(postcssOptions) {
+                    postcssOptions.plugins.push(tailwindcss);
+                    postcssOptions.plugins.push(autoprefixer);
+                    return postcssOptions;
+                },
+            };
+        },
+    ],
 };
 
 export default config;
