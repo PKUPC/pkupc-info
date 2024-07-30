@@ -3,6 +3,8 @@ import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import dotenv from 'dotenv';
 import customImage from './src/plugins/customImage';
+import tailwindcss from 'tailwindcss';
+import autoprefixer from 'autoprefixer';
 
 dotenv.config({ path: '.env' });
 dotenv.config({ path: '.env.local' });
@@ -152,6 +154,19 @@ const config: Config = {
             darkTheme: prismThemes.dracula,
         },
     } satisfies Preset.ThemeConfig,
+
+    plugins: [
+        async function tailwindPlugin() {
+            return {
+                name: 'docusaurus-tailwindcss',
+                configurePostCss(postcssOptions) {
+                    postcssOptions.plugins.push(tailwindcss);
+                    postcssOptions.plugins.push(autoprefixer);
+                    return postcssOptions;
+                },
+            };
+        },
+    ],
 };
 
 export default config;
