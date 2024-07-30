@@ -48,6 +48,9 @@ const customImage = () => {
                 if (filteredAttrs.length != 1) return; // 神秘情况
                 const srcAttr = filteredAttrs[0];
 
+                const filteredAltAttrs = node.attributes.filter((item) => item.name === 'alt');
+                const altAttr = filteredAltAttrs.length == 1 ? filteredAltAttrs[0] : undefined;
+
                 const lastExclamationIndex = srcAttr.value.value.lastIndexOf('!');
                 let filePath = srcAttr.value.value.substring(lastExclamationIndex + 1);
                 const defaultIndex = filePath.lastIndexOf('").default');
@@ -55,11 +58,12 @@ const customImage = () => {
 
                 const matchWidth = filePath.match(/[?&]width=(\d+)/);
                 const width = matchWidth ? matchWidth[1] : undefined;
+                const parsedWidth = width !== undefined ? parseInt(width) : undefined;
                 node.type = 'mdxJsxTextElement';
                 node.name = 'CustomImage';
                 node.data = { _mdxExplicitJsx: true };
-                node.attributes = [srcAttr, makeAttribute('width', parseInt(width))];
-
+                node.attributes = [srcAttr, makeAttribute('width', parsedWidth)];
+                if (altAttr !== undefined) node.attributes.push(altAttr);
                 if (parent && parent.tagName === 'p' && parent.children.length === 1) {
                     Object.keys(parent).forEach((key) => delete parent[key]);
                     Object.keys(node).forEach((key) => (parent[key] = node[key]));
@@ -71,7 +75,9 @@ const customImage = () => {
                 node.data = { _mdxExplicitJsx: true };
                 const matchWidth = node.properties.src.match(/[?&]width=(\d+)/);
                 const width = matchWidth ? matchWidth[1] : undefined;
-                node.attributes = [makeAttribute('src', node.properties.src), makeAttribute('width', parseInt(width))];
+                const parsedWidth = width !== undefined ? parseInt(width) : undefined;
+                node.attributes = [makeAttribute('src', node.properties.src), makeAttribute('width', parsedWidth)];
+                if (node.properties.alt) node.attributes.push(makeAttribute('alt', node.properties.alt));
 
                 if (parent && parent.tagName === 'p' && parent.children.length === 1) {
                     Object.keys(parent).forEach((key) => delete parent[key]);
