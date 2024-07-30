@@ -1,7 +1,7 @@
 import { Image } from 'antd';
 
 export default function CustomImage({ src, width, alt }: { src: string; width?: number; alt?: string }) {
-    console.log([src, width, alt]);
+    // console.log([src, width, alt]);
     let caption = undefined;
     if (alt && alt.startsWith('caption:')) {
         caption = alt.slice(8);
