@@ -99,7 +99,7 @@ const config: Config = {
                     items: [
                         {
                             label: '活动资料',
-                            to: '/archive/guan-yu',
+                            to: '/archive/about',
                         },
                         {
                             label: '常用工具',
