@@ -34,10 +34,6 @@
     --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-.text-indent-4 {
-    text-indent: 2rem;
-}
-
 .no-margin-p p {
     margin: 0;
 }
