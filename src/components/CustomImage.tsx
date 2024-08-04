@@ -14,7 +14,7 @@ export default function CustomImage({ src, width, alt }: { src: string; width?: 
                     src={src}
                     alt={alt ?? 'image'}
                     width={width}
-                    style={{ maxWidth: '100%' }}
+                    className={'max-w-full'}
                     preview={{ getContainer: false }}
                 />
                 {caption && <div className={'text-gray-500 mt-1'}>{caption}</div>}
