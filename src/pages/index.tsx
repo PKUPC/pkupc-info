@@ -4,19 +4,20 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
-import styles from './index.module.css';
 import React from 'react';
 
 function HomepageHeader() {
     const { siteConfig } = useDocusaurusContext();
     return (
-        <header className={clsx('hero hero--primary', styles.heroBanner)}>
+        <header
+            className={clsx('hero hero--primary', 'text-center relative overflow-hidden p-8 w996:pt-16 w996:pb-16')}
+        >
             <div className="container">
                 <Heading as="h1" className="hero__title">
                     {siteConfig.title}
                 </Heading>
                 <p className="hero__subtitle">{siteConfig.tagline}</p>
-                <div className={styles.buttons}>
+                <div className="flex items-center justify-center">
                     <Link className="button button--secondary button--lg" to="https://pnku3.pkupuzzle.art/home">
                         刚刚过去的活动：P&KU 3（上）
                     </Link>

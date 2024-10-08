@@ -1,6 +1,5 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
-import styles from './styles.module.css';
 import React from 'react';
 
 type FeatureItem = {
@@ -10,22 +9,12 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
     {
-        title: '这是什么活动？',
+        title: '关于我们',
+        description: <>PKU Puzzle Club 是北京大学学生自主运营的由谜题爱好者组成的社团（筹备中）。</>,
+    },
+    {
+        title: '关于 P&KU',
         description: <>Puzzle and Key Universe (P&KU) 是 Puzzle Hunt 的一种。</>,
-    },
-    {
-        title: '活动由谁组织？',
-        description: (
-            <>
-                P&KU 系列的主要策划者是现在在北京大学（PKU）就读的 Winfrid。截至
-                P&KU3，每届的编写团队与工作人员都包含了很多在北京大学就读的同学及校友，同时也有来自校外的朋友们。
-                你可以在活动资料中查看每一届的工作人员列表。
-            </>
-        ),
-    },
-    {
-        title: '什么时间举办？',
-        description: <>目前本活动大约一年一次，具体的时间和日期并不确定。等 Winfrid 来补充。</>,
     },
 ];
 
@@ -42,9 +31,10 @@ function Feature({ title, description }: FeatureItem) {
 
 export default function HomepageFeatures() {
     return (
-        <section className={styles.features}>
+        <section className="flex items-center pt-8 pb-8 w-full">
             <div className="container">
                 <div className="row">
+                    <div className={clsx('col col--2')}></div>
                     {FeatureList.map((props, idx) => (
                         <Feature key={idx} {...props} />
                     ))}

@@ -3,7 +3,11 @@
 module.exports = {
     content: ['./src/**/*.{js,jsx,ts,tsx,md,mdx}', './docs/**/*.{md,mdx}', './blog/**/*.{md,mdx}'],
     theme: {
-        extend: {},
+        extend: {
+            screens: {
+                w996: '996px',
+            },
+        },
     },
     plugins: [],
     darkMode: ['class', '[data-theme="dark"]'],
