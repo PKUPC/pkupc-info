@@ -104,10 +104,6 @@ const config: Config = {
                             to: '/archive/about',
                         },
                         {
-                            label: '常用工具',
-                            to: '/tools/jian-jie',
-                        },
-                        {
                             label: '公众号文章',
                             to: '/wechat-official-account',
                         },
@@ -123,6 +119,10 @@ const config: Config = {
                         {
                             label: '电子邮件',
                             href: 'mailto:winfridx@163.com',
+                        },
+                        {
+                            label: '微信公众号',
+                            href: 'https://info.pkupuzzle.art/img/qrcode.webp',
                         },
                     ],
                 },
