@@ -22,7 +22,7 @@ const config: Config = {
 
     url: 'https://info.pkupuzzle.art/',
 
-    baseUrl: githubPageMode ? '/pnku-info/' : '/',
+    baseUrl: githubPageMode ? '/pkupc-info/' : '/',
 
     organizationName: 'PKU Puzzle Club',
     projectName: 'pkupc-info',
