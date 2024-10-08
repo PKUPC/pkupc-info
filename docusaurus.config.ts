@@ -16,16 +16,16 @@ const beiAnInfo =
         : '';
 
 const config: Config = {
-    title: 'P&KU 资料站',
+    title: 'PKU Puzzle Club',
     tagline: '一起来享受解谜的乐趣吧！',
     favicon: 'img/favicon.ico',
 
     url: 'https://info.pkupuzzle.art/',
 
-    baseUrl: githubPageMode ? '/pnku-info/' : '/',
+    baseUrl: githubPageMode ? '/pkupc-info/' : '/',
 
-    organizationName: 'P&KU Team',
-    projectName: 'P&KU Info',
+    organizationName: 'PKU Puzzle Club',
+    projectName: 'pkupc-info',
 
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
@@ -47,12 +47,14 @@ const config: Config = {
                     path: 'docs',
                     routeBasePath: '/',
                     sidebarPath: './sidebars.ts',
-                    editUrl: 'https://github.com/kinami0331/pnku-info/blob/main/',
+                    editUrl: 'https://github.com/PKUPC/pkupc-info/blob/main/',
                     rehypePlugins: [customImage],
                 },
                 blog: {
                     showReadingTime: true,
-                    editUrl: 'https://github.com/kinami0331/pnku-info/blob/main/',
+                    routeBasePath: 'wechat-official-account',
+                    path: 'content/wechat-official-account',
+                    editUrl: 'https://github.com/PKUPC/pkupc-info/blob/main/',
                 },
                 theme: {
                     customCss: './src/css/custom.css',
@@ -65,7 +67,7 @@ const config: Config = {
         // Replace with your project's social card
         image: 'img/docusaurus-social-card.jpg',
         navbar: {
-            title: 'P&KU 资料站',
+            title: 'PKU Puzzle Club',
             logo: {
                 alt: 'P&KU Logo',
                 src: 'img/logo.svg',
@@ -75,17 +77,17 @@ const config: Config = {
                     type: 'docSidebar',
                     sidebarId: 'archive',
                     position: 'left',
-                    label: '活动资料',
+                    label: 'P&KU',
                 },
+                // {
+                //     type: 'docSidebar',
+                //     sidebarId: 'tools',
+                //     position: 'left',
+                //     label: '常用工具',
+                // },
+                { to: '/wechat-official-account', label: '公众号文章', position: 'left' },
                 {
-                    type: 'docSidebar',
-                    sidebarId: 'tools',
-                    position: 'left',
-                    label: '常用工具',
-                },
-                { to: '/blog', label: '文章', position: 'left' },
-                {
-                    href: 'https://github.com/kinami0331/pnku-info',
+                    href: 'https://github.com/PKUPC/pkupc-info',
                     label: 'GitHub',
                     position: 'right',
                 },
@@ -106,8 +108,8 @@ const config: Config = {
                             to: '/tools/jian-jie',
                         },
                         {
-                            label: '文章',
-                            to: '/blog',
+                            label: '公众号文章',
+                            to: '/wechat-official-account',
                         },
                     ],
                 },
