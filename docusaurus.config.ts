@@ -55,6 +55,8 @@ const config: Config = {
                     routeBasePath: 'wechat-official-account',
                     path: 'content/wechat-official-account',
                     editUrl: 'https://github.com/PKUPC/pkupc-info/blob/main/',
+                    blogSidebarTitle: 'All posts',
+                    blogSidebarCount: 'ALL',
                 },
                 theme: {
                     customCss: './src/css/custom.css',
