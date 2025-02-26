@@ -57,6 +57,7 @@ const config: Config = {
                     editUrl: 'https://github.com/PKUPC/pkupc-info/blob/main/',
                     blogSidebarTitle: 'All posts',
                     blogSidebarCount: 'ALL',
+                    postsPerPage: 5,
                 },
                 theme: {
                     customCss: './src/css/custom.css',

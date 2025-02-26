@@ -51,3 +51,15 @@
 .no-margin-p p {
     margin: 0;
 }
+
+.hero--custom {
+    --ifm-hero-background-color: var(--ifm-color-primary-lightest);
+    --ifm-hero-text-color: var(--ifm-font-color-base-inverse);
+}
+.button.hero--button {
+    background-color: var(--ifm-color-secondary-lightest);
+}
+
+.answer-history-container {
+    background-color: var(--ifm-color-content-inverse);
+}
