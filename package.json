@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "@ant-design/cssinjs": "^1.21.0",
+    "@ant-design/icons": "^5.6.1",
     "@docusaurus/core": "^3.5.2",
     "@docusaurus/preset-classic": "^3.5.2",
     "@docusaurus/theme-common": "^3.5.2",
