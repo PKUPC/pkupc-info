@@ -12,12 +12,12 @@
 
 :root {
     --ifm-color-primary: #b91c1c;
-    --ifm-color-primary-dark: #b01b1b;
-    --ifm-color-primary-darker: #a61919;
-    --ifm-color-primary-darkest: #9d1818;
-    --ifm-color-primary-light: #bc2727;
-    --ifm-color-primary-lighter: #c03333;
-    --ifm-color-primary-lightest: #c33e3e;
+    --ifm-color-primary-dark: #a61919;
+    --ifm-color-primary-darker: #9d1818;
+    --ifm-color-primary-darkest: #821414;
+    --ifm-color-primary-light: #cc1f1f;
+    --ifm-color-primary-lighter: #d52020;
+    --ifm-color-primary-lightest: #e03535;
     --ifm-color-secondary: #16bcbc;
     --ifm-color-secondary-dark: #15b3b3;
     --ifm-color-secondary-darker: #14a9a9;
@@ -31,13 +31,13 @@
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-    --ifm-color-primary: #c03333;
-    --ifm-color-primary-dark: #b63030;
-    --ifm-color-primary-darker: #ad2e2e;
-    --ifm-color-primary-darkest: #a32b2b;
-    --ifm-color-primary-light: #c33d3d;
-    --ifm-color-primary-lighter: #c64747;
-    --ifm-color-primary-lightest: #c95151;
+    --ifm-color-primary: #e17070;
+    --ifm-color-primary-dark: #db5454;
+    --ifm-color-primary-darker: #d84646;
+    --ifm-color-primary-darkest: #c32929;
+    --ifm-color-primary-light: #e78c8c;
+    --ifm-color-primary-lighter: #ea9a9a;
+    --ifm-color-primary-lightest: #f3c4c4;
     --ifm-color-secondary: #19d1d1;
     --ifm-color-secondary-dark: #18c7c7;
     --ifm-color-secondary-darker: #16bcbc;

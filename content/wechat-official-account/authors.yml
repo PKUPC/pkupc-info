@@ -10,7 +10,7 @@ gary:
 
 orthos:
   name: Orthos
-  title: 谜协成员
+  title: 谜协成员，梦想创作打动人心的谜题
   image_url: https://q1.qlogo.cn/g?b=qq&nk=945091459&s=100
 
 soliloquies:
@@ -42,3 +42,8 @@ fivero:
   name: Fivero
   title: 谜题界的小学生
   image_url: https://q1.qlogo.cn/g?b=qq&nk=893620971&s=100
+
+col:
+  name: COL
+  title: 谜协成员
+  image_url: https://q1.qlogo.cn/g?b=qq&nk=2318286836&s=100

@@ -14,15 +14,15 @@ import Heading from '@theme/Heading';
 
 export interface AnswerCheckProps {
     answer?: string | Record<string, Answer>;
-    specialJudge?: AnswerSpecialJudgeType;
+    specialJudge?: AnswerSpecialJudge;
     showHistory?: boolean;
 }
 
 export enum AnswerType {
-    CORRECT,
-    MILESTONE,
-    WRONG,
-    INIT,
+    CORRECT = 'CORRECT',
+    MILESTONE = 'MILESTONE',
+    WRONG = 'WRONG',
+    INIT = 'INIT',
 }
 
 export type Answer = {
@@ -30,7 +30,11 @@ export type Answer = {
     message?: string;
 };
 
-export type AnswerSpecialJudgeType = (x: string) => Answer;
+export type AnswerSpecialJudgeParam = {
+    currentAnswer: string;
+    pastAnswers?: string[];
+};
+export type AnswerSpecialJudge = (param: AnswerSpecialJudgeParam) => Answer;
 
 const regularJudge = (x: string, ansMap: Record<string, Answer>): Answer => {
     const normalizedX = normalizeAnswerString(x);
@@ -139,7 +143,12 @@ export const AnswerCheck = ({ answer, specialJudge, showHistory = true }: Answer
             return;
         }
         try {
-            const result = specialJudge ? specialJudge(normalizedAnswer) : regularJudge(normalizedAnswer, answerMap);
+            const result = specialJudge
+                ? specialJudge({
+                      currentAnswer: normalizedAnswer,
+                      pastAnswers: historyAnswers.map((record) => record.answer),
+                  })
+                : regularJudge(normalizedAnswer, answerMap);
             setStatus(result.type);
             setLastMessage(result.message);
             setHistoryAnswers((hisAnswers) =>
@@ -165,7 +174,7 @@ export const AnswerCheck = ({ answer, specialJudge, showHistory = true }: Answer
             <Space direction="vertical" className="mt-[24px] w-full">
                 <Form onFinish={onCheckAnswer}>
                     <Space.Compact block className="w-full">
-                        <Form.Item<AnswerFormFieldType> name="answer" className="w-1/3">
+                        <Form.Item<AnswerFormFieldType> name="answer" className="w-full lg:w-2/3">
                             <Input
                                 placeholder={'请输入答案'}
                                 className="ant-input-compact-item ant-input-compact-first-item"
