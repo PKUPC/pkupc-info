@@ -1,5 +1,49 @@
 winfrid:
   name: Winfrid
   title: P&KU 系列总策划
-  #  url: https://github.com/endiliey
-  image_url: /public/avatars/winfrid.jpg
+  image_url: https://q1.qlogo.cn/g?b=qq&nk=1664270853&s=100
+
+gary:
+  name: Gary
+  title: 谜协团支书，谜色星期五供稿人
+  image_url: https://q1.qlogo.cn/g?b=qq&nk=2664492079&s=100
+
+orthos:
+  name: Orthos
+  title: 谜协成员，梦想创作打动人心的谜题
+  image_url: https://q1.qlogo.cn/g?b=qq&nk=945091459&s=100
+
+soliloquies:
+  name: 怎苏昂
+  title: 谜协成员
+  image_url: https://q1.qlogo.cn/g?b=qq&nk=1124773358&s=100
+
+linight:
+  name: Linight
+  title: 谜协成员
+  image_url: https://q1.qlogo.cn/g?b=qq&nk=1376928145&s=100
+
+tongtong:
+  name: 同同
+  title: 谜协成员
+  image_url: https://q1.qlogo.cn/g?b=qq&nk=3384293851&s=100
+
+qiaozi:
+  name: 樵子若木
+  title: Stay puzzled.
+  image_url: https://q1.qlogo.cn/g?b=qq&nk=2026852574&s=100
+
+hexi:
+  name: 何夕
+  title: 谜协成员
+  image_url: https://q1.qlogo.cn/g?b=qq&nk=549382589&s=100
+
+fivero:
+  name: Fivero
+  title: 谜题界的小学生
+  image_url: https://q1.qlogo.cn/g?b=qq&nk=893620971&s=100
+
+col:
+  name: COL
+  title: 谜协成员
+  image_url: https://q1.qlogo.cn/g?b=qq&nk=2318286836&s=100
