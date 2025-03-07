@@ -8,14 +8,21 @@ import {
     QuestionCircleOutlined,
 } from '@ant-design/icons';
 import { normalizeAnswerString } from '../utils/formatString';
-import { Button, Form, FormProps, Space, Tag, Tooltip } from 'antd';
+import { Button, Form, FormProps, Space, Tag, Tooltip, Typography } from 'antd';
 import { Input } from 'antd/lib';
 import Heading from '@theme/Heading';
+
+export enum MitiType {
+    PNKU = 'pnku',
+    ZHIBI = 'zhibi',
+}
 
 export interface AnswerCheckProps {
     answer?: string | Record<string, Answer>;
     specialJudge?: AnswerSpecialJudge;
     showHistory?: boolean;
+    instructions?: React.ReactNode;
+    mitiType?: MitiType;
 }
 
 export enum AnswerType {
@@ -48,14 +55,22 @@ const regularJudge = (x: string, ansMap: Record<string, Answer>): Answer => {
 type AdmonitionDisplayProps = {
     type: string;
     icon: React.ReactNode;
-    genDefaultText: (x: string) => React.ReactNode;
+    genDefaultText: (x: string, mitiType?: MitiType) => React.ReactNode;
 };
 
 const statusAdmonitionTypeMap: Record<AnswerType, AdmonitionDisplayProps> = {
     [AnswerType.CORRECT]: {
         type: 'tip',
         icon: <CheckCircleOutlined />,
-        genDefaultText: (x) => `回答正确！这道谜题的正确答案是“${x}”。`,
+        genDefaultText: (x, mitiType) => {
+            switch (mitiType) {
+                case MitiType.ZHIBI:
+                    return '回答正确！恭喜你完成了这道纸笔谜题！';
+                case MitiType.PNKU:
+                default:
+                    return `回答正确！这道谜题的正确答案是“${x}”。`;
+            }
+        },
     },
     [AnswerType.MILESTONE]: {
         type: 'warning',
@@ -106,7 +121,13 @@ type AnswerFormFieldType = {
     answer?: string;
 };
 
-export const AnswerCheck = ({ answer, specialJudge, showHistory = true }: AnswerCheckProps) => {
+export const AnswerCheck = ({
+    answer,
+    specialJudge,
+    showHistory = true,
+    instructions,
+    mitiType = MitiType.PNKU,
+}: AnswerCheckProps) => {
     const [status, setStatus] = useState<AnswerType>(AnswerType.INIT);
     const [lastAnswer, setLastAnswer] = useState<string>('');
     const [lastMessage, setLastMessage] = useState<string | undefined>();
@@ -170,23 +191,30 @@ export const AnswerCheck = ({ answer, specialJudge, showHistory = true }: Answer
     const isShowHistory = showHistory && historyAnswers.length > 0;
 
     return (
-        <Admonition type={admonitionType} icon={icon} title={lastMessage || genDefaultText(lastAnswer)}>
-            <Space direction="vertical" className="mt-[24px] w-full">
-                <Form onFinish={onCheckAnswer}>
-                    <Space.Compact block className="w-full">
-                        <Form.Item<AnswerFormFieldType> name="answer" className="w-full lg:w-2/3">
-                            <Input
-                                placeholder={'请输入答案'}
-                                className="ant-input-compact-item ant-input-compact-first-item"
-                            />
-                        </Form.Item>
-                        <Button type="primary" htmlType="submit">
-                            提交
-                        </Button>
-                    </Space.Compact>
-                </Form>
-                {isShowHistory && <AnswerHistory historyAnswers={historyAnswers} />}
-            </Space>
-        </Admonition>
+        <>
+            <Heading as="h2">答案验证</Heading>
+            <Admonition type={admonitionType} icon={icon} title={lastMessage || genDefaultText(lastAnswer, mitiType)}>
+                <Space direction="vertical" className="mt-[24px] w-full">
+                    <Form onFinish={onCheckAnswer}>
+                        <Space.Compact block className="w-full">
+                            <Form.Item<AnswerFormFieldType>
+                                name="answer"
+                                className="w-full lg:w-2/3"
+                                extra={instructions}
+                            >
+                                <Input
+                                    placeholder={'请输入答案'}
+                                    className="ant-input-compact-item ant-input-compact-first-item"
+                                />
+                            </Form.Item>
+                            <Button type="primary" htmlType="submit">
+                                提交
+                            </Button>
+                        </Space.Compact>
+                    </Form>
+                    {isShowHistory && <AnswerHistory historyAnswers={historyAnswers} />}
+                </Space>
+            </Admonition>
+        </>
     );
 };
