@@ -12,3 +12,8 @@ mise:
   label: 谜色星期五
   permalink: /mise
   description: 谜色星期五栏目。
+
+zhibi:
+  label: 执笔成谜
+  permalink: /zhibi
+  description: 执笔成谜栏目。
