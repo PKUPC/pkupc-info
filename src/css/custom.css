@@ -63,3 +63,7 @@
 .answer-history-container {
     background-color: var(--ifm-color-content-inverse);
 }
+
+#answer_extra.ant-form-item-extra {
+    color: var(--ifm-alert-foreground-color);
+}
