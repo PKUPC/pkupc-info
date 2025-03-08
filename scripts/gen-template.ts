@@ -41,6 +41,25 @@ if (!fs.existsSync(destDir)) {
 fs.copyFileSync(sourceFile, destFile);
 console.log(`Copied and renamed file: ${sourceFile} → ${destFile}`);
 
+function replaceInFile(filePath: string, paramIndexStr: string): void {
+    try {
+        // Read the file content
+        let content = fs.readFileSync(filePath, 'utf8');
+
+        // Replace all occurrences of "000" with paramIndexStr
+        content = content.replace(/000/g, paramIndexStr);
+
+        // Write the updated content back to the file
+        fs.writeFileSync(filePath, content, 'utf8');
+
+        console.log(`Replaced "000" with "${paramIndexStr}" in ${filePath}`);
+    } catch (error) {
+        console.error(`Error processing file: ${error}`);
+    }
+}
+
+replaceInFile(destFile, paramIndexStr);
+
 // Create the assets directory
 if (!fs.existsSync(assetsDir)) {
     fs.mkdirSync(assetsDir);
