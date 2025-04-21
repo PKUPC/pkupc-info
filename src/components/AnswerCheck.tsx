@@ -23,6 +23,7 @@ export interface AnswerCheckProps {
     showHistory?: boolean;
     instructions?: React.ReactNode;
     mitiType?: MitiType;
+    exampleAnswer?: string;
 }
 
 export enum AnswerType {
@@ -127,6 +128,7 @@ export const AnswerCheck = ({
     showHistory = true,
     instructions,
     mitiType = MitiType.PNKU,
+    exampleAnswer,
 }: AnswerCheckProps) => {
     const [status, setStatus] = useState<AnswerType>(AnswerType.INIT);
     const [lastAnswer, setLastAnswer] = useState<string>('');
@@ -190,6 +192,8 @@ export const AnswerCheck = ({
 
     const isShowHistory = showHistory && historyAnswers.length > 0;
 
+    const placeholder = exampleAnswer ? `请输入答案，比如：${exampleAnswer}` : '请输入答案';
+
     return (
         <>
             <Heading as="h2">答案验证</Heading>
@@ -203,7 +207,7 @@ export const AnswerCheck = ({
                                 extra={instructions}
                             >
                                 <Input
-                                    placeholder={'请输入答案'}
+                                    placeholder={placeholder}
                                     className="ant-input-compact-item ant-input-compact-first-item"
                                 />
                             </Form.Item>
