@@ -63,3 +63,49 @@
 .answer-history-container {
     background-color: var(--ifm-color-content-inverse);
 }
+
+.carousel-inner {
+    color: var(--ifm-font-color-base);
+}
+
+.carousel-inner div,
+.carousel-inner img {
+    margin: auto;
+}
+
+.ant-carousel .slick-prev,
+.ant-carousel .slick-next,
+.ant-carousel .slick-prev:hover,
+.ant-carousel .slick-next:hover,
+.ant-carousel .slick-prev:focus,
+.ant-carousel .slick-next:focus {
+    font-size: inherit;
+    color: currentColor !important;
+}
+
+.ant-carousel .slick-dots li {
+    margin-top: 0;
+}
+.ant-carousel .slick-dots li button {
+    background-color: var(--ifm-font-color-base) !important;
+}
+
+.ant-carousel .slick-prev::before {
+    color: currentColor !important;
+}
+
+.slick-arrow.slick-prev {
+    font-size: 20px !important;
+}
+
+.ant-carousel .slick-next::before {
+    color: currentColor !important;
+}
+
+.slick-arrow.slick-next {
+    font-size: 20px !important;
+}
+
+#answer_extra.ant-form-item-extra {
+    color: var(--ifm-alert-foreground-color);
+}

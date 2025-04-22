@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
+    "dev": "docusaurus start",
     "start": "docusaurus start",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
@@ -14,7 +15,8 @@
     "typecheck": "tsc",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "gen-template": "tsx scripts/gen-template.ts"
   },
   "dependencies": {
     "@ant-design/cssinjs": "^1.21.0",
@@ -52,6 +54,7 @@
     "postcss": "^8.4.40",
     "prettier": "^3.3.3",
     "tailwindcss": "^3.4.7",
+    "tsx": "^4.19.3",
     "typescript": "^5.2.2"
   },
   "browserslist": {
