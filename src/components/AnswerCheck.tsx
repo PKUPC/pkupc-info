@@ -35,7 +35,7 @@ export enum AnswerType {
 
 export type Answer = {
     type: AnswerType;
-    message?: string;
+    message?: React.ReactNode;
 };
 
 export type AnswerSpecialJudgeParam = {
@@ -100,7 +100,7 @@ const statusTagColorMap: Record<AnswerType, string> = {
 type AnswerResultType = {
     answer: string;
     verdict: AnswerType;
-    message?: string;
+    message?: React.ReactNode;
 };
 
 const AnswerHistory = ({ historyAnswers }: { historyAnswers: AnswerResultType[] }) => (
@@ -132,7 +132,7 @@ export const AnswerCheck = ({
 }: AnswerCheckProps) => {
     const [status, setStatus] = useState<AnswerType>(AnswerType.INIT);
     const [lastAnswer, setLastAnswer] = useState<string>('');
-    const [lastMessage, setLastMessage] = useState<string | undefined>();
+    const [lastMessage, setLastMessage] = useState<React.ReactNode | undefined>();
     const [historyAnswers, setHistoryAnswers] = useState<AnswerResultType[]>([]);
 
     const answerMap: Record<string, Answer> | undefined = useMemo(() => {
