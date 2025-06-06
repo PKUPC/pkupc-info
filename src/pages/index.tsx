@@ -17,10 +17,10 @@ function HomepageHeader() {
                 <p className="hero__subtitle">{siteConfig.tagline}</p>
                 <div className="flex items-center justify-center">
                     <Link
-                        className="button button--secondary hero--button button--lg"
+                        className="button button--primary hero--button button--lg"
                         to="https://pnku3.pkupuzzle.art/home"
                     >
-                        刚刚过去的活动：P&KU 3（上）
+                        <span className="hero--button-text">刚刚过去的活动：P&KU 3（上）</span>
                     </Link>
                 </div>
             </div>

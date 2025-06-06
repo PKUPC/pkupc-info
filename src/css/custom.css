@@ -11,40 +11,40 @@
 @tailwind utilities;
 
 :root {
-    --ifm-color-primary: #b91c1c;
-    --ifm-color-primary-dark: #a61919;
-    --ifm-color-primary-darker: #9d1818;
-    --ifm-color-primary-darkest: #821414;
-    --ifm-color-primary-light: #cc1f1f;
-    --ifm-color-primary-lighter: #d52020;
-    --ifm-color-primary-lightest: #e03535;
-    --ifm-color-secondary: #16bcbc;
-    --ifm-color-secondary-dark: #15b3b3;
-    --ifm-color-secondary-darker: #14a9a9;
-    --ifm-color-secondary-darkest: #13a0a0;
-    --ifm-color-secondary-light: #22bfbf;
-    --ifm-color-secondary-lighter: #2ec3c3;
-    --ifm-color-secondary-lightest: #39c6c6;
+    --ifm-color-secondary: #d1f2f9;
+    --ifm-color-secondary-dark: #a8e7f4;
+    --ifm-color-secondary-darker: #94e1f1;
+    --ifm-color-secondary-darkest: #57d0e9;
+    --ifm-color-secondary-light: #fafdfe;
+    --ifm-color-secondary-lighter: #ffffff;
+    --ifm-color-secondary-lightest: #ffffff;
+    --ifm-color-primary: #4375bc;
+    --ifm-color-primary-dark: #3c69a9;
+    --ifm-color-primary-darker: #3963a0;
+    --ifm-color-primary-darkest: #2f5284;
+    --ifm-color-primary-light: #5683c3;
+    --ifm-color-primary-lighter: #5f8ac6;
+    --ifm-color-primary-lightest: #7b9ed0;
     --ifm-code-font-size: 95%;
     --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-    --ifm-color-primary: #e17070;
-    --ifm-color-primary-dark: #db5454;
-    --ifm-color-primary-darker: #d84646;
-    --ifm-color-primary-darkest: #c32929;
-    --ifm-color-primary-light: #e78c8c;
-    --ifm-color-primary-lighter: #ea9a9a;
-    --ifm-color-primary-lightest: #f3c4c4;
-    --ifm-color-secondary: #19d1d1;
-    --ifm-color-secondary-dark: #18c7c7;
-    --ifm-color-secondary-darker: #16bcbc;
-    --ifm-color-secondary-darkest: #15b2b2;
-    --ifm-color-secondary-light: #24d3d3;
-    --ifm-color-secondary-lighter: #30d6d6;
-    --ifm-color-secondary-lightest: #3cd8d8;
+    --ifm-color-secondary: #1e2b57;
+    --ifm-color-secondary-dark: #1b274e;
+    --ifm-color-secondary-darker: #19254a;
+    --ifm-color-secondary-darkest: #151e3d;
+    --ifm-color-secondary-light: #212f60;
+    --ifm-color-secondary-lighter: #233164;
+    --ifm-color-secondary-lightest: #273871;
+    --ifm-color-primary: #b7ddf0;
+    --ifm-color-primary-dark: #94cce9;
+    --ifm-color-primary-darker: #82c4e5;
+    --ifm-color-primary-darkest: #4eabda;
+    --ifm-color-primary-light: #daeef7;
+    --ifm-color-primary-lighter: #ecf6fb;
+    --ifm-color-primary-lightest: #ffffff;
     --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
@@ -53,11 +53,19 @@
 }
 
 .hero--custom {
-    --ifm-hero-background-color: var(--ifm-color-primary-lightest);
-    --ifm-hero-text-color: var(--ifm-font-color-base-inverse);
+    --ifm-hero-background-color: var(--ifm-color-secondary-dark);
+    /* --ifm-hero-text-color: var(--ifm-font-color-base-inverse); */
 }
-.button.hero--button {
-    background-color: var(--ifm-color-secondary-lightest);
+.hero--button-text {
+    color: var(--ifm-color-content-inverse);
+}
+.hero__title,
+.hero__subtitle {
+    color: var(--ifm-color-primary);
+}
+html[data-theme='dark'] .footer,
+html[data-theme='dark'] .footer__link-item {
+    color: var(--ifm-color-primary-darkest);
 }
 
 .answer-history-container {
