@@ -13,34 +13,38 @@ date: 2025-03-18T20:00
 
 今天是该系列的第一题。本题的规则为<span className="font-bold">[V]标准</span>，即标准扫雷。
 
-![](./zhibi-017.assets/zhibi-017-rule.webp)
-
-![](./zhibi-017.assets/zhibi-017.webp)
-
-（注意雷数在左上角已经给出，问号格一定不是雷）
+<center>
+  ![](./zhibi-017.assets/zhibi-017.webp)
+  <ImgCaption>（注意雷数在左上角已经给出，问号格一定不是雷）</ImgCaption>
+</center>
 
 {/* truncate */}
+
+## [V]标准规则
+
+每个数字标明周围八格内雷的数量。
+
+![](./zhibi-017.assets/zhibi-017-rule.webp)
 
 ## 做题链接
 
 你可以[在 penpa 网站上进行尝试](https://swaroopg92.github.io/penpa-edit/#m=edit&p=7ZXNTttYFMf3eQrk9a3kj3w43lQMhW4Y5gMqhKIIOcFAhBMzjlMqR5EQA6R0GGUq0RYBVRnKSFBmGKRBHSChL9PYSVZ5Bc49NsR20kU3EYvK8tHxz+ee+/e9+d/kfynIukJEuASRsISDSwjzePNsHG/WvSYyhqpIA/bGSWv3/3btub1ftsrr7drGgL1cBWS/OmvXdvgwGSwY85oOlWdb1mm5eX1sb68QYu0dNY6v7P1a/eIfe+uTtfYXttm0/63ULz7YlT8ah1fQol593/zzyFr7aL08snbPYZ5m+T/rcAfmsdZOnOEwsLGzCsWtcgU6tGvvnFH1atVerbAPxPrlb60351hzjrI27/rbG8ugBPv83vz1+k7J5+WVxu526+1B/eKF/foSPq55ela/Wrf3/m4dbNNWtx8JleSHkREyK6t5JZRwlycZKppxyRwk5mMpwXAMYXi4OSZJzJ+kovm9ZI4RcxxeMUQENuoU8ZAOd9JJfE+zIQdyLORjbg7pFKTpjJ5WlelRh/woJcwJwtB5vsPRNGWy2lOFcXXQ57SWTWUoyGZySt6F+cKMtlBwy7hkiZiDqNSt7iFX6MilqSOXZn2XG0+WSrDiP4PgaSlBtT/ppGInHZeKEMekIsNH6VDYFM7ZFoaPB4DA3q7FLRAoEDwAh0Q6IMJTEPaACAUPPSAWAFFs6ukRxSGeWaKo1ANi2MOjNCYGgIjSvSD4tSIO8SiNcwHAseGAMo4LtuU4VO9ZI47DUb4av1xYfw53YQrjCEYe4wRsEjEFjI8wshgjGEexZhjjJMYhjGGMUayJ0W3+qh9CH+Qk+CiepJ0r0t/nZCgB5xGT19TpfEGfldPgLjyuwEXAcoVsStF9SNW0RRXM5oOZuZymKz1fUajMzPWqT2n6TKD7kqyqPuD87/iQc074kKHDIeB5lnVdW/KRrGzM+0BKNuBfKj+fWfR3UnKGX4Ah+yXKC3JgNnr2MJKhF5RSiHnG4J0QYHnD3876/p/1dPXZ+2b0+yYHf7ea3tP0gHv4HmhPf7u8y+LAu8xMJ+z2M9AelgYadDWgbmMD7PI2sC/Ym3YNOpyqCpqcTtXlczpV5/Ph9E6GMLsB)
 
-<AnswerCheck 
+<AnswerCheck
   answer={'25413243'}
   mitiType="zhibi"
   instructions={
     <span>
       依次输入<span className="underline font-bold">每一行</span>的雷数，多位数只填写个位。
-    </span>}
-  exampleAnswer={'31123'} 
+    </span>
+  }
+  exampleAnswer={'31123'}
 />
 
 ## 解答
 
 <Solution author={'怎苏昂'}>
-<div className="lg:w-2/3 mx-auto">
-![](./zhibi-017.assets/zhibi-017-sol.webp)
-</div>
+  <div className="lg:w-2/3 mx-auto">![](./zhibi-017.assets/zhibi-017-sol.webp)</div>
 </Solution>
 
 ### 步骤解析
@@ -54,8 +58,9 @@ date: 2025-03-18T20:00
         <img src={require('./zhibi-017.assets/zhibi-017-sol-1.webp').default} />
       </div>
     </CarouselInner>
-  <CarouselInner>
-      而后注意到下图中蓝色区域至少有一个雷（根据 E4 格的 3），黄色区域至少有一个雷（根据 G7 格的 5），结合 G5 格的 2，所有带绿色感叹号的格子属性均可得出。
+    <CarouselInner>
+      而后注意到下图中蓝色区域至少有一个雷（根据 E4 格的 3），黄色区域至少有一个雷（根据 G7 格的 5），结合 G5 格的
+      2，所有带绿色感叹号的格子属性均可得出。
       <div className="lg:w-2/3">
         <img src={require('./zhibi-017.assets/zhibi-017-sol-2.webp').default} />
       </div>
@@ -75,28 +80,28 @@ date: 2025-03-18T20:00
       <div className="lg:w-2/3">
         <img src={require('./zhibi-017.assets/zhibi-017-sol-5.webp').default} />
       </div>
-    </CarouselInner>  
-        <CarouselInner>
+    </CarouselInner>
+    <CarouselInner>
       <div className="lg:w-2/3">
         <img src={require('./zhibi-017.assets/zhibi-017-sol-6.webp').default} />
       </div>
     </CarouselInner>
     <CarouselInner>
-      观察 A6 格的 2，蓝色区域内至多有两个雷。
-      观察 C6 格的 4，蓝色区域内至多两个雷。
-      于是蓝色区域内必须恰好有两个雷，绿色叹号格子的属性可以得知。
-      （该推理方法可以被总结为扫雷的减法定式，在之前的<a href='https://info.pkupuzzle.art/wechat-official-account/zhibi-010'>彼岸双生的这篇文章</a>中的解析扫雷篇里有所提及）
+      观察 A6 格的 2，蓝色区域内至多有两个雷。 观察 C6 格的 4，蓝色区域内至多两个雷。
+      于是蓝色区域内必须恰好有两个雷，绿色叹号格子的属性可以得知。 （该推理方法可以被总结为扫雷的减法定式，在之前的
+      <a href="/wechat-official-account/zhibi-010" target="_blank">彼岸双生的这篇文章</a>
+      中的解析扫雷篇里有所提及）
       <div className="lg:w-2/3">
         <img src={require('./zhibi-017.assets/zhibi-017-sol-7.webp').default} />
       </div>
-    </CarouselInner>  
+    </CarouselInner>
     <CarouselInner>
       <div className="lg:w-2/3">
         <img src={require('./zhibi-017.assets/zhibi-017-sol-8.webp').default} />
       </div>
     </CarouselInner>
     <CarouselInner>
-    而后根据“全部占满雷”和“全部不是雷”的逻辑即可得到接近最终解，而后最后一个格子的属性可以通过总雷数得出：
+      而后根据“全部占满雷”和“全部不是雷”的逻辑即可得到接近最终解，而后最后一个格子的属性可以通过总雷数得出：
       <div className="lg:w-2/3">
         <img src={require('./zhibi-017.assets/zhibi-017-sol-9.webp').default} />
       </div>
