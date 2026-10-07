@@ -3,6 +3,7 @@ import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import dotenv from 'dotenv';
 import customImage from './src/plugins/customImage';
+import articleCalendar from './src/plugins/articleCalendar';
 import tailwindcss from '@tailwindcss/postcss';
 
 dotenv.config({ path: '.env' });
@@ -159,6 +160,7 @@ const config: Config = {
     } satisfies Preset.ThemeConfig,
 
     plugins: [
+        articleCalendar,
         async function tailwindPlugin() {
             return {
                 name: 'docusaurus-tailwindcss',
