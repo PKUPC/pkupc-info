@@ -68,6 +68,15 @@ pkupc:
   title: PKU 谜协公众号编辑组
   image_url: http://p.qlogo.cn/gh/649943168/649943168/0
 
+heibaiyou:
+  name: 黑白游
+
+xuechuan:
+  name: 雪川
+
+lingfengcold:
+  name: 凌风cold
+
 kongmingqixing:
   name: 孔明七星
   title: 谜题如诗
@@ -77,3 +86,42 @@ qiyuxuanang:
   name: 气宇轩昂
   title: 振兴纸笔谜题，吾辈仍需努力
   image_url: https://q1.qlogo.cn/g?b=qq&nk=2070975677&s=100
+
+star23:
+  name: 二十三号星星
+
+leafy:
+  name: Leafy
+
+lonelawn:
+  name: LoneLawn
+  image_url: https://q1.qlogo.cn/g?b=qq&nk=68289799&s=100
+
+plenilune:
+  name: Plenilune
+  image_url: https://q1.qlogo.cn/g?b=qq&nk=1436322283&s=100
+
+wyxkk:
+  name: WYXkk
+  image_url: https://q1.qlogo.cn/g?b=qq&nk=2068559520&s=100
+
+shengjian:
+  name: 生煎
+  image_url: https://q1.qlogo.cn/g?b=qq&nk=741711175&s=100
+
+yinhhh:
+  name: yinhhh
+
+esc:
+  name: esc
+  image_url: https://q1.qlogo.cn/g?b=qq&nk=2536360605&s=100
+
+lana:
+  name: 不忘初音的Lana
+
+fuguangsuchen:
+  name: 浮光溯尘
+
+cals:
+  name: CALS
+  image_url: https://q1.qlogo.cn/g?b=qq&nk=1419366579&s=100

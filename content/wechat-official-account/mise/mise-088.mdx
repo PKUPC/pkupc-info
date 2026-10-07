@@ -1,0 +1,63 @@
+---
+title: 【谜色星期五】调色盘
+slug: mise-088
+authors: [gary]
+tags: [mise]
+date: 2026-07-03T20:00:00+08:00
+---
+
+<CustomImage src={require('./mise-088.assets/mise-088.png').default} alt={'调色盘题图'} />
+
+> 打翻了多彩的调色盘，为世间万物赋予颜色。
+
+{/* truncate */}
+
+<AnswerCheck answer={'let'} exampleAnswer={'ful'} />
+
+## 提示
+
+<details>
+  <summary>提示 01</summary>
+
+观察每行左右图片内容的差异，可以获得颜色的含义。
+
+</details>
+
+<details>
+  <summary>提示 02</summary>
+
+第二行左侧的物体的颜色分别是粉，金，粉，灰。查一查这些颜色的英文分别是什么。
+
+</details>
+
+{/* 提示来源：用户提供的公众号回复，口令 260703提示01、260703提示02。 */}
+
+## 解析
+
+<Solution author={'Gary'}>
+
+谜题的正确答案是：**let**。
+
+<CustomImage src={require('./mise-088.assets/mise-088-sol.png').default} alt={'调色盘解析图'} />
+
+本题首先注意到左侧图片对应的单词正好是右边图片对应单词的一部分：apple-pineapple tail-ponytail。
+观察相差的部分，能够发现第一行相差的部分(pine)恰好是粉色(pink)的前三个字母和蓝色(blue)的最后一个字母，与苹果的颜色分布（前 3/4 是粉色，后 1/4 是蓝色）一致。
+观察第二行左侧的图片的颜色分布，分别是粉色、金色(gold)、粉色、灰色(grey)。
+按照顺次提取 pink 第一位、gold 第二位、pink 第三位、grey 第四位能够得到 pony（是第二行两个单词相差的部分）。
+根据同样的思路先识别出第三行颜色分别为黑色(black)、绿色(green)、黑色、黑色、白色(white)。
+提取对应颜色的顺位能够得到 brace。
+在识别出右侧的图片对应的英文为 bracelet 后，做差就能得到本题的答案是 let。
+
+</Solution>
+
+### 补充点评（By 同同）
+
+<details>
+  <summary>补充点评（By 同同）</summary>
+
+这里所有颜色对应的单词必须具有相同的长度才能按次序提取，因此无法将这些颜色理解为颜色相近的其他单词。
+例如，不能在第一行、第二行中用 red 代替 pink，不能在第二行中用 orange 代替 gold 等。
+
+灰色 grey 还有一种写法是 gray，这里正好只用到单词的末位字母因此没有造成任何影响。
+
+</details>

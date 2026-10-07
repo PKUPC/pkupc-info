@@ -1,0 +1,70 @@
+---
+title: 【谜色星期五】幻方
+slug: mise-038
+authors: [winfrid]
+tags: [mise]
+date: 2025-06-20T20:00:00+08:00
+---
+
+<CustomImage src={require('./mise-038.assets/mise-038.png').default} alt={'幻方题图'} />
+
+{/* truncate */}
+
+<AnswerCheck answer={'日历'} exampleAnswer={'方幻'} />
+
+## 提示
+
+<details>
+  <summary>提示 01</summary>
+
+幻方要求每行每列每个对角线的数字和为15，按照要求先将上方格式的文字填入方阵中。
+
+</details>
+
+<details>
+  <summary>提示 02</summary>
+
+注意在本题的字体下，数字2调转180度仍然是2。
+
+</details>
+
+{/* 提示来源：用户提供的公众号回复，口令 250620提示01、250620提示02。 */}
+
+## 解析
+
+<Solution author={'Winfrid'}>
+
+谜题的正确答案是：**日历**。
+
+<CustomImage src={require('./mise-038.assets/mise-038-sol.png').default} alt={'幻方解析图'} />
+
+为保证每行、每列、每条对角线上三个数字的求和都相等，对数字 1～9，这个相同的和必须是 15。
+按规则将数字填入方格中。右上角提取标记 1 位置应填入 8，形似“日”字。右下角位置应填入 4。
+注意到提取标记 2 同时包括了填入的 4 和部分边框，以及 2 在本题字体下是旋转对称的，
+因此可以将遮住部分颠倒过来并得到“历”。从而得到本题的正确答案“日历”。
+
+</Solution>
+
+### 补充点评（By 同同）
+
+<details>
+  <summary>补充点评（By 同同）</summary>
+
+填入格中相应位置的数字是 8 和 4，于是立即想到——
+
+<CustomImage src={require('./mise-038.assets/mise-038-meme-1.jpg').default} alt={'玩家提交八四和消毒液的聊天记录'} />
+
+<CustomImage
+  src={require('./mise-038.assets/mise-038-meme-2.jpg').default}
+  alt={'玩家提交八四、提示口令和消毒液的聊天记录'}
+/>
+
+<ImgCaption>刻印在中国人 DNA 里的数字对应。此事在 CCBC1314 小行星带里亦有记载</ImgCaption>
+
+以及——
+
+<CustomImage src={require('./mise-038.assets/mise-038-meme-3.png').default} alt={'玩家另一条答案提交记录'} />
+
+<ImgCaption>此事则是在 CCBC1314 的汉字方阵里有所记载</ImgCaption>
+
+</details>
