@@ -190,3 +190,48 @@
         grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 }
+
+.tagHeader {
+    padding: 24px 16px;
+    margin-bottom: 24px;
+    text-align: center;
+    border: 1px solid var(--ifm-color-emphasis-200);
+    border-radius: 16px;
+    background: var(--ifm-background-surface-color);
+}
+.tagHeader h1 {
+    margin: 12px 0;
+    overflow-wrap: anywhere;
+}
+.tagBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    border-radius: 999px;
+    background: var(--ifm-color-emphasis-100);
+    color: var(--ifm-color-emphasis-700);
+    font-size: 0.85rem;
+}
+.tagDescription {
+    margin: 0 0 12px;
+    color: var(--ifm-color-emphasis-700);
+}
+.tagMeta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px 24px;
+    font-size: 0.9rem;
+    color: var(--ifm-color-emphasis-700);
+}
+.tagMeta a {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+.tagMeta a:focus-visible {
+    outline: 3px solid var(--ifm-color-primary);
+    outline-offset: 3px;
+}

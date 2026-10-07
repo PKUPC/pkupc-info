@@ -8,6 +8,7 @@ export interface CalendarArticle {
     month: number;
     day: number;
     series: ArticleSeries;
+    tagPermalinks: string[];
 }
 
 export interface ArticleCalendarData {

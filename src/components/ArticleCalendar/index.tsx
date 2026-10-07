@@ -5,7 +5,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import useIsBrowser from '@docusaurus/useIsBrowser';
 import { usePluginData } from '@docusaurus/useGlobalData';
 import { useLocation, useHistory } from '@docusaurus/router';
-import { LeftOutlined, RightOutlined } from '@ant-design/icons';
+import { LeftOutlined, RightOutlined, TagOutlined } from '@ant-design/icons';
 import clsx from 'clsx';
 import type { ArticleCalendarData, CalendarArticle } from './types';
 import styles from './styles.module.css';
@@ -121,7 +121,20 @@ export function MonthCard({
 }
 
 export function CalendarHome() {
-    const articles = useCalendarArticles();
+    return <ArticleCalendar articles={useCalendarArticles()} title="公众号文章" />;
+}
+
+export function ArticleCalendar({
+    articles,
+    title,
+    description,
+    allTagsPath,
+}: {
+    articles: CalendarArticle[];
+    title: string;
+    description?: string;
+    allTagsPath?: string;
+}) {
     const location = useLocation();
     const history = useHistory();
     const isBrowser = useIsBrowser();
@@ -138,7 +151,23 @@ export function CalendarHome() {
     };
     return (
         <main className={clsx('container margin-vert--lg', styles.calendar)}>
-            <Heading as="h1">公众号文章</Heading>
+            {allTagsPath ? (
+                <header className={styles.tagHeader}>
+                    <span className={styles.tagBadge}>
+                        <TagOutlined aria-hidden="true" /> 标签
+                    </span>
+                    <Heading as="h1">{title}</Heading>
+                    {description && <p className={styles.tagDescription}>{description}</p>}
+                    <div className={styles.tagMeta}>
+                        <span>共 {articles.length} 篇文章</span>
+                        <Link to={allTagsPath}>
+                            查看所有标签 <RightOutlined aria-hidden="true" />
+                        </Link>
+                    </div>
+                </header>
+            ) : (
+                <Heading as="h1">{title}</Heading>
+            )}
             <DateControl
                 label={`${year}年`}
                 previous={year > earliest}

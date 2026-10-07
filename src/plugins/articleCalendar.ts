@@ -26,6 +26,7 @@ export function buildArticleCalendar(blogPosts: BlogPost[]): ArticleCalendarData
             return {
                 title: metadata.title,
                 permalink: metadata.permalink,
+                tagPermalinks: metadata.tags.map((tag) => tag.permalink),
                 date: new Date(metadata.date).toISOString(),
                 year,
                 month,

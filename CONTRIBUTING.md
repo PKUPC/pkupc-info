@@ -27,6 +27,8 @@ CI 使用 `GITHUB_PAGE_MODE=true` 检查 GitHub Pages 子路径，所以改路�
 文件名、图片目录及 Markdown/MDX 约定见 README。保持已有 slug、作者、日期、标签和内容授权信息。
 活动资料在 `docs/archive/`，公众号文章在 `content/wechat-official-account/`。
 
+作者标签使用 `authors.yml` 的作者 ID 作为标签键，并在 `tags.yml` 中以作者显示名字配置标签。每篇文章的 `tags` 应包含所有作者的标签；修改作者时同步作者标签，保留原有栏目标签。已使用作者的 `url` 指向对应标签页，使文章头像和名字可直接跳转；新增作者时同步配置该链接。
+
 生成新文章骨架：
 
 ```sh
