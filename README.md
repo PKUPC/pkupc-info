@@ -21,12 +21,15 @@
 
 ## 开发
 
+详细的项目地图与协作约定见 [AGENTS.md](./AGENTS.md)，开发、CI 与交接流程见 [CONTRIBUTING.md](./CONTRIBUTING.md)。这些说明适用于不同模型和 Agent 工具。
+本次依赖迁移与视觉验证记录见 [2026-10-07 维护记录](./maintenance/2026-10-07.md)。
+
 ### 安装依赖
 
-我们使用 `pnpm` 管理依赖，`pnpm-lock.yaml` 文件也一并在项目中提供了。
+使用 `.node-version` 指定的 Node.js 24 和 `package.json#packageManager` 固定的 pnpm 版本。依赖由 `pnpm-lock.yaml` 锁定。
 
 ```
-$ pnpm install
+$ pnpm install --frozen-lockfile
 ```
 
 ### 本地开发
@@ -49,4 +52,4 @@ $ pnpm run build
 ## 开源协议
 
 代码部分（`src` 文件夹下）使用 [MIT 协议](./LICENSE)。
-文档部分（`docs` 和 `blog` 文件夹下）使用 [CC BY-NC 4.0 协议](https://creativecommons.org/licenses/by-nc/4.0/)。
+文档部分（`docs` 和 `content/wechat-official-account` 文件夹下）使用 [CC BY-NC 4.0 协议](https://creativecommons.org/licenses/by-nc/4.0/)。

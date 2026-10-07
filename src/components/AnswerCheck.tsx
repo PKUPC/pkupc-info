@@ -8,8 +8,7 @@ import {
     QuestionCircleOutlined,
 } from '@ant-design/icons';
 import { normalizeAnswerString } from '../utils/formatString';
-import { Button, Form, FormProps, Space, Tag, Tooltip, Typography } from 'antd';
-import { Input } from 'antd/lib';
+import { Button, Form, FormProps, Input, Space, Tag, Tooltip, Typography } from 'antd';
 import Heading from '@theme/Heading';
 
 export enum MitiType {
@@ -107,7 +106,7 @@ const AnswerHistory = ({ historyAnswers }: { historyAnswers: AnswerResultType[] 
     <div>
         <Heading as={'h3'}>历史提交</Heading>
         <div className="p-[16px] rounded-[8px] w-full answer-history-container">
-            <Space direction="horizontal">
+            <Space orientation="horizontal">
                 {historyAnswers.map((history) => (
                     <Tooltip key={`answer-tag-${history.answer}`} title={history.message ? history.message : null}>
                         <Tag color={statusTagColorMap[history.verdict]}>{history.answer}</Tag>
@@ -198,7 +197,7 @@ export const AnswerCheck = ({
         <>
             <Heading as="h2">答案验证</Heading>
             <Admonition type={admonitionType} icon={icon} title={lastMessage || genDefaultText(lastAnswer, mitiType)}>
-                <Space direction="vertical" className="mt-[24px] w-full">
+                <Space orientation="vertical" className="mt-[24px] w-full">
                     <Form onFinish={onCheckAnswer}>
                         <Space.Compact block className="w-full">
                             <Form.Item<AnswerFormFieldType>
