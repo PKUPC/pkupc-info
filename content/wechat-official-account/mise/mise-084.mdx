@@ -1,0 +1,53 @@
+---
+title: 【谜色星期五】何移位
+slug: mise-084
+authors: [plenilune, pkupc]
+tags: [mise]
+date: 2026-06-05T20:00:00+08:00
+---
+
+<CustomImage src={require('./mise-084.assets/mise-084.png').default} alt={'何移位题图'} />
+
+> 从时间上来看，这应该算一种“现代密码”？
+
+{/* truncate */}
+
+<AnswerCheck answer={'reed'} exampleAnswer={'keys'} />
+
+## 提示
+
+<details>
+  <summary>提示 01</summary>
+
+<CustomImage src={require('./mise-084.assets/mise-084-hint-01.jpg').default} alt={'何移位提示图'} />
+
+</details>
+
+{/* 提示来源：用户提供的公众号回复，口令 260605提示01。 */}
+
+## 解析
+
+<Solution author={'Plenilune'}>
+
+谜题的正确答案是：**reed**。
+
+<CustomImage src={require('./mise-084.assets/mise-084-sol.png').default} alt={'何移位解析图'} />
+
+最大的突破点可能在于第三行的箭头，可以看出是在一个斜网格图上经过平移来完成变换的。
+这样的斜网格图可以把 die 映成 gpt、把 eu 映成 dj，可能与字母有关；并且只有上下方向是斜的，左右水平，可以联想到电脑键盘。
+用第二行 fur → git 验证知正确，故考虑第四行右边取 pool，反方向平移得到答案是 reed。
+
+</Solution>
+
+### 作者的话
+
+<details>
+  <summary>作者的话</summary>
+
+本题的构思来源于写程序的时候盲打，把 for 打成了 gpt，之后便开始寻找这样的巧合，也找到了不少；最后把一个四个字母的变换作为答案。
+
+一些没有用上的巧思：poet 在考虑循环下，向右平移 5 格得到 trip；考虑到 gpt 与 git 均使用 logo，本来有用 audi 四环的前三环来代指 aud，再右移两格得到 dog 的打算。
+
+一些用上的巧思：提示里面用了 shift 右移 11 格得到 shift，这里指的实际上是 shift 键，来提示这道题指的是键盘。
+
+</details>

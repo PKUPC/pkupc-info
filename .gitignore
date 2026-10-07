@@ -27,3 +27,7 @@ yarn-error.log*
 
 # Local package cache
 .pnpm-store/
+
+# Local migration records
+/maintenance/
+/maintainence/
