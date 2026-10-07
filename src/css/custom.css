@@ -6,9 +6,31 @@
 
 /* You can override the default Infima variables here. */
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Keep Infima's reset and unlayered utility precedence from Tailwind 3. */
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' source(none);
+
+@source '../';
+@source '../../docs';
+@source '../../content';
+@source not inline('container');
+
+@custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
+
+/* Preserve the site's existing breakpoint and editorial highlight colors. */
+@theme {
+    --breakpoint-w996: 996px;
+    --color-gray-500: #6b7280;
+    --color-red-500: #ef4444;
+    --color-red-600: #dc2626;
+    --color-red-700: #b91c1c;
+    --color-blue-600: #2563eb;
+    --color-violet-400: #a78bfa;
+    --color-violet-600: #7c3aed;
+    --color-purple-700: #7e22ce;
+    --color-lime-400: #a3e635;
+    --color-orange-200: #fed7aa;
+}
 
 :root {
     --ifm-color-secondary: #d1f2f9;

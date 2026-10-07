@@ -3,8 +3,7 @@ import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import dotenv from 'dotenv';
 import customImage from './src/plugins/customImage';
-import tailwindcss from 'tailwindcss';
-import autoprefixer from 'autoprefixer';
+import tailwindcss from '@tailwindcss/postcss';
 
 dotenv.config({ path: '.env' });
 dotenv.config({ path: '.env.local' });
@@ -28,10 +27,10 @@ const config: Config = {
     projectName: 'pkupc-info',
 
     onBrokenLinks: 'throw',
-    onBrokenMarkdownLinks: 'warn',
 
     markdown: {
         format: 'detect',
+        hooks: { onBrokenMarkdownLinks: 'warn' },
     },
 
     i18n: {
@@ -164,8 +163,7 @@ const config: Config = {
             return {
                 name: 'docusaurus-tailwindcss',
                 configurePostCss(postcssOptions) {
-                    postcssOptions.plugins.push(tailwindcss);
-                    postcssOptions.plugins.push(autoprefixer);
+                    postcssOptions.plugins.push(tailwindcss());
                     return postcssOptions;
                 },
             };

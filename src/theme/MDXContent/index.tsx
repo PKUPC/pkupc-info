@@ -10,7 +10,7 @@ type Props = WrapperProps<typeof MDXContentType>;
 
 export default function MDXContentWrapper(props: Props): React.ReactNode {
     return (
-        <ConfigProvider locale={zhCN} theme={{ cssVar: true }}>
+        <ConfigProvider locale={zhCN} theme={{ cssVar: {} }}>
             <StyleProvider hashPriority={'high'}>
                 <MDXContent {...props} />
             </StyleProvider>
