@@ -1,14 +1,17 @@
 winfrid:
+  url: /wechat-official-account/tags/winfrid
   name: Winfrid
   title: P&KU 系列总策划
   image_url: https://q1.qlogo.cn/g?b=qq&nk=1664270853&s=100
 
 gary:
+  url: /wechat-official-account/tags/gary
   name: Gary
   title: 谜协团支书，谜色星期五供稿人
   image_url: https://q1.qlogo.cn/g?b=qq&nk=2664492079&s=100
 
 orthos:
+  url: /wechat-official-account/tags/orthos
   name: Orthos
   title: 谜协成员，梦想创作打动人心的谜题
   image_url: https://q1.qlogo.cn/g?b=qq&nk=945091459&s=100
@@ -29,16 +32,19 @@ tongtong:
   image_url: https://q1.qlogo.cn/g?b=qq&nk=3384293851&s=100
 
 qiaozi:
+  url: /wechat-official-account/tags/qiaozi
   name: 樵子若木
   title: Stay puzzled.
   image_url: https://q1.qlogo.cn/g?b=qq&nk=2026852574&s=100
 
 hexi:
+  url: /wechat-official-account/tags/hexi
   name: 何夕
   title: 执笔成谜供稿人
   image_url: https://q1.qlogo.cn/g?b=qq&nk=549382589&s=100
 
 fivero:
+  url: /wechat-official-account/tags/fivero
   name: Fivero
   title: 谜题界的小学生
   image_url: https://q1.qlogo.cn/g?b=qq&nk=893620971&s=100
@@ -49,79 +55,103 @@ col:
   image_url: https://q1.qlogo.cn/g?b=qq&nk=2318286836&s=100
 
 changgong:
+  url: /wechat-official-account/tags/changgong
   name: changgong
   title: 谜题与幻想的交织
   image_url: https://q1.qlogo.cn/g?b=qq&nk=2227345581&s=100
 
 yuzuo:
+  url: /wechat-official-account/tags/yuzuo
   name: 鱼左
   title: 公众号语谜puzzling主编 鱼谜纸牌设计者
   image_url: https://q1.qlogo.cn/g?b=qq&nk=2113183619&s=100
 
 seleclipse:
+  url: /wechat-official-account/tags/seleclipse
   name: Seleclipse
   title: PnKU 出题人，其实还没出出来
   image_url: https://q1.qlogo.cn/g?b=qq&nk=3209636087&s=100
 
 pkupc:
+  url: /wechat-official-account/tags/pkupc
   name: PKU 谜协
   title: PKU 谜协公众号编辑组
   image_url: http://p.qlogo.cn/gh/649943168/649943168/0
 
 heibaiyou:
+  url: /wechat-official-account/tags/heibaiyou
   name: 黑白游
 
 xuechuan:
+  url: /wechat-official-account/tags/xuechuan
   name: 雪川
 
 lingfengcold:
+  url: /wechat-official-account/tags/lingfengcold
   name: 凌风cold
 
 kongmingqixing:
+  url: /wechat-official-account/tags/kongmingqixing
   name: 孔明七星
   title: 谜题如诗
   image_url: https://q1.qlogo.cn/g?b=qq&nk=1419581943&s=100
 
 qiyuxuanang:
+  url: /wechat-official-account/tags/qiyuxuanang
   name: 气宇轩昂
   title: 振兴纸笔谜题，吾辈仍需努力
   image_url: https://q1.qlogo.cn/g?b=qq&nk=2070975677&s=100
 
 star23:
+  url: /wechat-official-account/tags/star23
   name: 二十三号星星
 
 leafy:
+  url: /wechat-official-account/tags/leafy
   name: Leafy
 
 lonelawn:
+  url: /wechat-official-account/tags/lonelawn
   name: LoneLawn
   image_url: https://q1.qlogo.cn/g?b=qq&nk=68289799&s=100
 
 plenilune:
+  url: /wechat-official-account/tags/plenilune
   name: Plenilune
   image_url: https://q1.qlogo.cn/g?b=qq&nk=1436322283&s=100
 
 wyxkk:
+  url: /wechat-official-account/tags/wyxkk
   name: WYXkk
   image_url: https://q1.qlogo.cn/g?b=qq&nk=2068559520&s=100
 
 shengjian:
+  url: /wechat-official-account/tags/shengjian
   name: 生煎
   image_url: https://q1.qlogo.cn/g?b=qq&nk=741711175&s=100
 
 yinhhh:
+  url: /wechat-official-account/tags/yinhhh
   name: yinhhh
 
 esc:
+  url: /wechat-official-account/tags/esc
   name: esc
   image_url: https://q1.qlogo.cn/g?b=qq&nk=2536360605&s=100
 
 lana:
+  url: /wechat-official-account/tags/lana
   name: 不忘初音的Lana
 
 fuguangsuchen:
+  url: /wechat-official-account/tags/fuguangsuchen
   name: 浮光溯尘
 
 cals:
+  url: /wechat-official-account/tags/cals
   name: CALS
   image_url: https://q1.qlogo.cn/g?b=qq&nk=1419366579&s=100
+
+kelpus:
+  url: /wechat-official-account/tags/kelpus
+  name: Kelpus

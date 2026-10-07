@@ -17,3 +17,111 @@ zhibi:
   label: 执笔成谜
   permalink: /zhibi
   description: 执笔成谜栏目。
+
+winfrid:
+  label: Winfrid
+  permalink: /winfrid
+
+gary:
+  label: Gary
+  permalink: /gary
+
+orthos:
+  label: Orthos
+  permalink: /orthos
+
+qiaozi:
+  label: 樵子若木
+  permalink: /qiaozi
+
+hexi:
+  label: 何夕
+  permalink: /hexi
+
+fivero:
+  label: Fivero
+  permalink: /fivero
+
+changgong:
+  label: changgong
+  permalink: /changgong
+
+yuzuo:
+  label: 鱼左
+  permalink: /yuzuo
+
+seleclipse:
+  label: Seleclipse
+  permalink: /seleclipse
+
+pkupc:
+  label: PKU 谜协
+  permalink: /pkupc
+
+heibaiyou:
+  label: 黑白游
+  permalink: /heibaiyou
+
+xuechuan:
+  label: 雪川
+  permalink: /xuechuan
+
+lingfengcold:
+  label: 凌风cold
+  permalink: /lingfengcold
+
+kongmingqixing:
+  label: 孔明七星
+  permalink: /kongmingqixing
+
+qiyuxuanang:
+  label: 气宇轩昂
+  permalink: /qiyuxuanang
+
+star23:
+  label: 二十三号星星
+  permalink: /star23
+
+leafy:
+  label: Leafy
+  permalink: /leafy
+
+lonelawn:
+  label: LoneLawn
+  permalink: /lonelawn
+
+plenilune:
+  label: Plenilune
+  permalink: /plenilune
+
+wyxkk:
+  label: WYXkk
+  permalink: /wyxkk
+
+shengjian:
+  label: 生煎
+  permalink: /shengjian
+
+yinhhh:
+  label: yinhhh
+  permalink: /yinhhh
+
+esc:
+  label: esc
+  permalink: /esc
+
+lana:
+  label: 不忘初音的Lana
+  permalink: /lana
+
+fuguangsuchen:
+  label: 浮光溯尘
+  permalink: /fuguangsuchen
+
+cals:
+  label: CALS
+  permalink: /cals
+
+kelpus:
+  label: Kelpus
+  permalink: /kelpus
