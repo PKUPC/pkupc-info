@@ -79,9 +79,6 @@
   },
   "packageManager": "pnpm@10.27.0",
   "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild"
-    ],
     "overrides": {
       "@docusaurus/core>tinypool": "2.1.2",
       "serialize-javascript@<7.0.5": "7.0.5",

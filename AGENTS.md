@@ -4,6 +4,12 @@
 若工具不会自动读取 `AGENTS.md`，请在任务开始时主动读取本文件、`README.md` 和 `CONTRIBUTING.md`。
 无需任何特定模型、插件、付费服务或云端连接；普通终端、文件编辑器和浏览器即可完成开发。
 
+## 内容迁移 Skill
+
+迁移微信公众号 PKU谜协的《谜色星期五》或《黑色星期五》时，先读取
+[`skills/migrate-pku-friday/SKILL.md`](skills/migrate-pku-friday/SKILL.md)。
+普通 Agent 可直接按该文件执行，无需特定插件；它包含来源配对、内容编排和验证流程。
+
 ## 项目地图
 
 这是 PKU Puzzle Club 的中文静态资料站，不是比赛后台，也没有数据库或服务端答案验证。

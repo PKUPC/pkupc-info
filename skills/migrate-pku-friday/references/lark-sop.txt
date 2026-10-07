@@ -1,0 +1,215 @@
+来源：https://x76lngd8nj.feishu.cn/wiki/R0c6wdMWkiVCXzkvZrsc6FeZnjh
+获取方式：lark-cli docs +fetch，用户身份，只读，全文 Markdown 返回转纯文字。
+文档 ID：ALpzd9KVdohYajxr2klcnYgbnKf
+修订版本：1691
+提取日期：2026-10-07（北京时间）
+转换说明：保留完整正文、代码示例和链接；人员引用转为姓名；示意图保留链接，未转写图片内文字。
+以下为原文文字内容；未将编辑者补充意见混入原文。
+
+谜色星期五系列
+
+产品：Winfrid
+研发：JCarlson
+内容：Winfrid
+文章标签：mise
+
+适用文章
+
+标题内含有【谜色星期五】或类似名称的文章，包括但不限于
+
+- 【谜色星期三】
+- 【黑色星期五】
+
+原则上，不搬运没有发布解析的题目。
+
+针对部分栏目，其搬运流程或许与标准的【谜色星期五】略有区别，如果把握不准请咨询研发 Owner。
+
+
+
+文件命名
+
+位于 mise 文件夹下，建立一组新的 mise-000.mdx 文件和 mise-000.assets 文件夹，其中 000 替换成对应谜色的序号标签。
+
+如果开发环境已经配好，可以使用一键生成指令：
+
+示例（Bash）：
+pnpm run gen-template mise <序号>
+
+# 例子
+pnpm run gen-template mise 30  # 产物名为 mise-030
+
+脚本会创建一组新的 mise-000.mdx 文件和 mise-000.assets 文件夹。
+
+如果是黑色星期五等特殊套题，文件名可以参考历史命名。
+
+
+
+图片资源搬运
+
+从需要搬运的微信文章（题目和解答两篇）中，下载需要的素材，包括题目本身、题目解答、解析/评价中出现的辅助图或者梗图，放在 assets 文件夹内。图片尽量以 webp 格式存储。
+
+对于题目本身，命名方法为mise-000.webp。
+
+对于题目解答，命名方法为mise-000-sol.webp。
+
+对于与题目解析相关的图片，命名方法为mise-000-sol-1.webp，按先后顺序从 1 向后编号。
+
+对于其他图片，命名方法为mise-000-meme-1.webp，按先后顺序从 1 向后编号。
+
+
+
+文章元数据
+
+文章元数据是指 mdx 文件最上方的，被两行 --- 包裹起来的 yaml 格式数据，用于标注作者、文章发布时间，以及添加标签等作用。
+
+元数据请参考以下格式填写：
+
+示例（yaml）：
+---
+title: 【谜色星期五】<题目名称>
+slug: mise-000 <填写编号>
+authors: [winfrid] <填写作者>
+tags: [mise]
+date: 2025-02-14T20:00 <填写发布时间，北京时间>
+---
+
+
+关于作者：请参考content/wechat-official-account/authors.yml文件，每一名作者都按照该格式填写：
+
+示例（yaml）：
+winfrid: <作者标签名>
+  name: Winfrid <作者名>
+  title: P&KU 系列总策划 <作者头衔>
+  image_url: https://q1.qlogo.cn/g?b=qq&nk=<QQ号>&s=100
+
+
+
+文章正文
+
+在填写完元数据后，mdx 文件里的其他内容均是文章正文内容。
+
+通常情况下，谜色星期五系列是一枚谜，也就是只需要一张图片以及标题就能解答的问题。如果微信文章的正文里只有关于“如何在微信公众号上验证答案”的提示性文本，那么在网页上是不需要将其搬运的。
+
+一些特殊情况，比如谜色 #10 图片的编号错误，谜色 #19 在题目中添加了与彩蛋相关的风味文本，则可以在适当的地方添加这些文字。
+
+若放在图片后面，根据编辑者自己的判断，可以将这些文字摆放在 truncate 前或后。
+
+如果需要使用 markdown 标题语法的，从二级标题 ## 开始使用。
+
+
+
+truncate
+
+在历史文章里可以看到的 {/* truncate */} 的作用是将文章截断，使得在文章列表页只显示截断前的部分。也就是说，这个 truncate 前的部分将会在文章列表页作为文章的一个概括显示。
+
+对于谜色系列，通常来说这个截断安放在图片之后。特殊情况，比如黑色星期五系列，可以根据需要调整截断前的内容，无需刻意显示图片。
+
+
+
+答案验证器
+
+truncate 后面摆放答案验证器，这是一个模仿 P&KU 系列的简易答案验证。
+
+对于固定答案，其用法如下：
+
+<AnswerCheck answer={'pku'} />
+
+将 pku 替换为答案即可。答案仅支持中文、英文字母和数字，不支持符号。英文字母对大小写不敏感，小写将会被转成大写。
+
+公众号上的谜色星期五系列的题目会提供一个提交样例，通常这个样例也会与真正的答案有一定的关系，起到一些旁敲侧击的提示作用，因此这些样例也可以搬运进来。需要添加样例的情况，可以使用验证器的 exampleAnswer属性：
+
+示例（TypeScript）：
+<AnswerCheck answer={'little'} exampleAnswer={'public'} />
+
+答案验证器的一些高级用法，比如多解、自定义回复，可以参考这篇文章（https://x76lngd8nj.feishu.cn/wiki/M8S3w1Ha5iF2Pmkhd4scwmJwnGI），也可以参考谜色第 26 篇（mise-026.mdx）。
+
+里程碑
+
+尽管谜色系列主打一枚谜，但似乎还是有出题人喜欢出交互题，在发送完答案后会出现第二张图的那种。
+
+这种情况下，可以使用验证器的高级用法，将新的图片设定为里程碑。
+
+具体可以参考谜色第 30 篇（mise-030.mdx）
+
+
+
+提示
+
+谜色系列文章自第三期起会自带提示，这些提示也需要搬运过来，放在二级标题“提示”下面。
+
+微信文章里会提示获取提示所需的口令，比如250307提示01，获得回复后按照 Details - Summary 的语法添加提示。
+
+提示的标题按顺序从 01 开始编号，就算仅有一条提示也是如此。
+
+Details - summary（https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/details） 的语法是指：
+
+示例（HTML）：
+<details>
+  <summary>Details</summary>
+
+  Something small enough to escape casual notice.
+</details>
+
+
+使用 Details - Summary 可以由 Docusaurus 渲染出这样的组件：
+
+示例图片（非文字内容）：https://feishu.cn/file/HNV8bxos9ogXLrxW5dRcoj9GnBn
+
+需要注意的是，<summary /> 标签的后面需要添加一个空行，否则里面的内容会放到正文里面，而不是标题。
+
+
+
+解析
+
+谜色第二期开始的每一篇文章会发布上一次谜色的答案与解析，因此需要到搬运题目的下一篇谜色找到本期题目的解析，放在二级标题“解析”下面。
+
+搬运时请使用<Solution />组件，使用方法为：
+
+示例（Markdown）：
+## 解析
+
+<Solution author={'Winfrid'}>
+谜题的正确答案是：**<填写谜题答案>**。
+
+![](./mise-000.assets/mise-000-sol.webp)
+
+一些具体的解析
+</Solution>
+
+关于文章内容的排版，可以参考这篇标准（https://github.com/RightCapitalHQ/chinese-style-guide?tab=readme-ov-file#%E4%B8%AD%E6%96%87）。
+
+尽量以句号、问号、感叹号等表示句子结束的标点符号为一行结尾，一行尽量不要超过 80 个字。
+
+如有需要，可以适当使用一些 markdown 的语法，比如列表、引用、粗体、代码框等。
+
+对于中英文混排，汉字与【英文字母或数字】之间需用空格隔开，汉字标点与【英文字母或数字】之间不加空格。
+
+对于图片下面有注释的情况，可以使用 ImgCaption 组件（https://x76lngd8nj.feishu.cn/wiki/B5IjwFETdi7NQhkDjI1cm9y9nRd）。
+
+示例（HTML）：
+<center>
+    ![](./mise-000.assets/mise-000-meme-1.webp)
+    <ImgCaption>为什么要演奏春日影啊！</ImgCaption>
+</center>
+
+
+
+作者的话、补充点评
+
+统一使用三级标题，其中作者的话为
+
+示例（Markdown）：
+### 作者的话（By Winfrid）
+
+补充点评为
+
+示例（Markdown）：
+### 补充点评（By 同同）
+
+其他排版要求同解析部分。
+
+
+
+留言板
+
+留言板暂不搬运。
