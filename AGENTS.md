@@ -10,6 +10,10 @@
 [`skills/migrate-pku-friday/SKILL.md`](skills/migrate-pku-friday/SKILL.md)。
 普通 Agent 可直接按该文件执行，无需特定插件；它包含来源配对、内容编排和验证流程。
 
+迁移《执笔成谜》纸笔题目时，先读取
+[`skills/migrate-pku-zhibi/SKILL.md`](skills/migrate-pku-zhibi/SKILL.md)。
+它包含 SOP 全文文字版、离线素材读取、解析与勘误配对、多解编排及验证流程。
+
 ## 项目地图
 
 这是 PKU Puzzle Club 的中文静态资料站，不是比赛后台，也没有数据库或服务端答案验证。

@@ -1,0 +1,88 @@
+---
+title: 【执笔成谜】Island of insight——Logic Grid篇（7）
+slug: zhibi-039
+authors: [soliloquies]
+tags: [zhibi, soliloquies]
+date: 2025-09-02T20:00
+---
+
+怎苏昂老师为大家带来了一套由其编写的纸笔谜题，主题为 **真知之岛（Island of insight）**。
+这个系列由一系列涂黑类谜题组成。已知黑圈必须对应黑格，白圈必须对应白格。剩下的规则每题不同，多彩多样。
+
+今天是该系列的第七题。本题的规则称为 **逻辑网格（Logic Grid）**。
+
+![](./zhibi-039.assets/zhibi-039.webp)
+
+{/* truncate */}
+
+## Logic Grid 逻辑网格规则
+
+- 相同字母属于同一区域，不同字母属于不同区域。
+- 数字表示所在区域的面积。
+- 所有黑格区域面积为 2。
+
+<img
+  src={require('./zhibi-039.assets/zhibi-039-rule.webp').default}
+  alt="Logic Grid 逻辑网格规则示例"
+  style={{ width: '100%', maxWidth: 320, height: 'auto', display: 'block', margin: '0 auto' }}
+/>
+
+## 做题链接
+
+你可以[在 penpa 网站上进行尝试](https://swaroopg92.github.io/penpa-edit/#m=edit&p=7ZRfT+pMEIfv+RQne+smb7cVLE3ORUH06IuIAuFIQ0jBAtWW9fQPeEr87s5MMbSlmnhjvDjZdDJ9Zjs7s9v9hX9iO3C4DkPTucIFDO1YpUdV6vQou9F3I88xfnAzjpYyAIfz6w6f217o8Mu7Zbspzc2p+XutR6OROFfiC2X4cPZwdOv/f+FqgTjr6N2r7pWrLsxfzcZNrXVU68bhIHLWN75oPAxG/Xl3uKirf1ud0XEyulaql6P5f2tz8LNi7UoYV7ZJ3UhMnpwbFhOMMxUewcY8uTG2yZWRdHjSgxDjOrB2OkkDt5W6KrhDiqPXTKFQwO+kfg3cO3DtIJCbSQ/6jNK5XcNK+pzhUg1KgC7z5dphu1LwfSb9qYuAvu/R2iyM7+VjvJsm8KvYi9yZ9GSAENkLT8y0gd5bAzCxpAF00wbQK2kAa8UGZm4w85xJO030yeqndgRHHS7dp10k10K9vIUXOJxbaGJiWNjPYO/qe7dnbMF2jC1TT/BLE7Y8PUGmaQVQVRFUM6BaAHUdQXMPhCgmEYLWabwRWF1QDXdkz8iqZPtQIk80sqdkFbJVsm2a0yI7JNske0y2RnNOsMlPbcMXlGOpNbrW+1H92vdxxYKLy0LpTcI4mNszZ+I827OIGal2ZCM5tor9qQM/WAZ5Uj557qosw1soB93FSgZOaQihc794LxWGSlJNZXBfqGlje16+FxLVHEqvYw5FAdy1zDtJRo74drTMgcy9zGVyVoXNjOx8ifajXVjN32/HS4U9M3osjat4Xv9U9hurLB6U8t1E5ruVQ/+4DD4QnH2wiEtkB+gHypOJlvF3RCYTLfIDRcFiD0UFaImuAC1KC6BDdQF4IDDA3tEYzFqUGayqqDS41IHY4FJZvbHGlVc=)。
+
+## 提交格式示例
+
+例如对于上面最下方的样例，请提交 **312**。
+
+<AnswerCheck
+  answer={'32424333'}
+  mitiType="zhibi"
+  instructions={'依次输入每一行黑格数目，只需提交个位。'}
+  exampleAnswer={'312'}
+/>
+
+## 解答
+
+<Solution author={'怎苏昂'}>
+  <div className="lg:w-2/3 mx-auto">![](./zhibi-039.assets/zhibi-039-sol.webp)</div>
+</Solution>
+
+### 步骤解析
+
+<details>
+  <summary>查看步骤解析</summary>
+  <Carousel arrows infinite={false}>
+    <CarouselInner>
+      本期题目需要用到的性质是：这样的5摆放只可能是5呈现Z形的摆放。
+      <div className="lg:w-2/3">
+        <img src={require('./zhibi-039.assets/zhibi-039-sol-1.webp').default} alt="步骤解析 1" />
+      </div>
+    </CarouselInner>
+    <CarouselInner>
+      于是上面的5只有两种摆放可能，如下所示：
+      <div className="lg:w-2/3">
+        <img src={require('./zhibi-039.assets/zhibi-039-sol-2.webp').default} alt="步骤解析 2" />
+      </div>
+    </CarouselInner>
+    <CarouselInner>
+
+      <div className="lg:w-2/3">
+        <img src={require('./zhibi-039.assets/zhibi-039-sol-3.webp').default} alt="步骤解析 3" />
+      </div>
+    </CarouselInner>
+    <CarouselInner>
+      在摆放了字母条件之后可以排除一种情况。
+      <div className="lg:w-2/3">
+        <img src={require('./zhibi-039.assets/zhibi-039-sol-4.webp').default} alt="步骤解析 4" />
+      </div>
+    </CarouselInner>
+    <CarouselInner>
+      于是在盘完面积5之后可以很轻松地得到答案。
+      <div className="lg:w-2/3">
+        <img src={require('./zhibi-039.assets/zhibi-039-sol-5.webp').default} alt="步骤解析 5" />
+      </div>
+    </CarouselInner>
+  </Carousel>
+
+</details>
