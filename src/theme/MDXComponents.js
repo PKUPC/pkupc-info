@@ -6,6 +6,7 @@ import Solution from '@site/src/components/Solution';
 import ImgCaption from '@site/src/components/ImgCaption';
 import CarouselInner from '@site/src/components/CarouselInner';
 import { Carousel } from 'antd';
+import WechatArticleLink from '@site/src/components/WechatArticleLink';
 
 export default {
     ...MDXComponents,
@@ -16,4 +17,5 @@ export default {
     ImgCaption,
     Carousel,
     CarouselInner,
+    WechatArticleLink,
 };
