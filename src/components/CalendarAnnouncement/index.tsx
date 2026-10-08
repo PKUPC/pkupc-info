@@ -7,6 +7,7 @@ import { StyleProvider } from '@ant-design/cssinjs';
 import styles from './styles.module.css';
 
 const STORAGE_KEY = 'pkupc-info:calendar-2027:dismissed';
+const ANNOUNCEMENT_END = Date.parse('2027-07-01T00:00:00+08:00');
 const CALENDAR_URL = '/curated/2027-puzzle-calendar';
 const BEAM_COLORS = ['#f3cf6f', '#c75741', '#78b273', '#e79454', '#1d1d1d', '#7fc6ec'].map((color, index) => ({
     color,
@@ -19,11 +20,12 @@ export default function CalendarAnnouncement(): React.ReactNode {
     const imageUrl = useBaseUrl('/img/puzzle-calendar-2027.png');
 
     useEffect(() => {
+        const active = Date.now() < ANNOUNCEMENT_END;
         try {
-            setOpen(localStorage.getItem(STORAGE_KEY) !== 'true');
+            setOpen(active && localStorage.getItem(STORAGE_KEY) !== 'true');
         } catch {
             // Storage may be unavailable; the announcement can still be dismissed for this visit.
-            setOpen(true);
+            setOpen(active);
         }
 
         // Root is outside Docusaurus's color-mode provider, so follow its HTML theme attribute.
