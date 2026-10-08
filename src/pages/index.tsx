@@ -18,9 +18,9 @@ function HomepageHeader() {
                 <div className="flex items-center justify-center">
                     <Link
                         className="button button--primary hero--button button--lg"
-                        to="https://pnku3.pkupuzzle.art/home"
+                        to="https://pnku3-playground.pkupuzzle.art/home"
                     >
-                        <span className="hero--button-text">刚刚过去的活动：P&KU 3（上）</span>
+                        <span className="hero--button-text">刚刚过去的活动：P&KU 3（中）</span>
                     </Link>
                 </div>
             </div>

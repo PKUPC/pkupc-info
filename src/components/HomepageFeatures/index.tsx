@@ -25,9 +25,6 @@ const FeatureList: FeatureItem[] = [
                 <ul className="indent-2">
                     <li>P&KU：在线解谜活动，大约一年一度</li>
                     <li>谜色星期五：更新于公众号的日常谜题</li>
-                    <li>
-                        <del>每日纸笔：目前尚未公开更新，敬请期待</del>
-                    </li>
                 </ul>
             </>
         ),

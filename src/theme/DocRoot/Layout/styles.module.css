@@ -1,0 +1,29 @@
+.frame {
+    flex: 1 0 auto;
+    min-width: 0;
+    width: 100%;
+}
+
+@media (min-width: 997px) {
+    .frame {
+        display: flex;
+        max-width: var(--ifm-container-width);
+        margin-inline: auto;
+    }
+}
+
+.frame > div,
+.frame > div > div {
+    min-width: 0;
+}
+
+.frame > div {
+    width: 100%;
+    flex: 1 1 auto;
+}
+
+@media (min-width: 1440px) {
+    .frame {
+        max-width: var(--ifm-container-width-xl);
+    }
+}

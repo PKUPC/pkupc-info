@@ -1,0 +1,10 @@
+.action {
+    margin: 20px 0;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    max-height: calc(100dvh - 160px);
+    object-fit: contain;
+}
