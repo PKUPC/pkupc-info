@@ -17,7 +17,7 @@ const BEAM_COLORS = ['#f3cf6f', '#c75741', '#78b273', '#e79454', '#1d1d1d', '#7f
 export default function CalendarAnnouncement(): React.ReactNode {
     const [open, setOpen] = useState(false);
     const [dark, setDark] = useState(false);
-    const imageUrl = useBaseUrl('/img/puzzle-calendar-2027.png');
+    const imageUrl = useBaseUrl('/img/puzzle-calendar-2027.webp');
 
     useEffect(() => {
         const active = Date.now() < ANNOUNCEMENT_END;
