@@ -50,6 +50,9 @@
 - Tailwind 4 使用 `@tailwindcss/postcss`，配置在 CSS 中。保留 Infima 的 reset，不引入 Tailwind Preflight，也不要生成会冲突的 `container` utility。
 - Ant Design 从公开入口 `antd` 导入；React、React DOM 和类型包按同一主版本升级。
 - 不编辑或提交 `build/`、`.docusaurus/`、`node_modules/` 等生成结果。禁止全仓库格式化造成无关文档变更。
+- 新增或迁入的静态位图必须转换为有损压缩的 `.webp`，包括题图、提示、解析、补充图片、宣传图和商品卡片；不得直接提交 PNG/JPEG 或仅改扩展名。SVG、网站 favicon 和动画素材保留适用格式。
+- 图片转换保留原始尺寸、比例及透明度，不重绘题图或改动文字、颜色与线条。一般图片可使用 WebP quality 85；文字密集的谜题图片使用 quality 90 或更高，并以实际画质为准。更新所有引用并移除已替换的旧格式文件。
+- 图片转换后检查编码、尺寸、透明度及引用，实际打开页面核对文字、线条和颜色，验证图片加载、适用的放大预览及 GitHub Pages 子路径；保存同视口、同主题的转换前后截图。构建通过不能替代图片画质与加载检查。
 - 代码遵循现有 Prettier/ESLint 配置。新功能或修复需要相应行为证据；目前没有独立单元测试套件，构建成功不能代替交互验证。
 
 ## 验证
