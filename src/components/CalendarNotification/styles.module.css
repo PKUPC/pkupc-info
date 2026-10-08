@@ -1,0 +1,15 @@
+.link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--ifm-font-color-base);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color var(--ifm-transition-fast) var(--ifm-transition-timing-default);
+}
+
+.link:hover,
+.link:focus-visible {
+    color: var(--ifm-color-primary);
+    text-decoration: none;
+}

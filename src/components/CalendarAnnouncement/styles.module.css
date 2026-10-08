@@ -1,0 +1,43 @@
+.modal {
+    padding-bottom: 0;
+}
+
+.note {
+    margin: 0 0 16px;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.note strong {
+    color: #c75741;
+    font-weight: 700;
+}
+
+.product {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding: 4px;
+    border: 1px solid #d9d9d9;
+    border-radius: 12px;
+}
+
+.product:focus-visible {
+    outline: 2px solid var(--ifm-color-primary);
+    outline-offset: 2px;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+:global([data-theme='dark']) .note strong {
+    color: #ff8b78;
+}
+
+:global([data-theme='dark']) .product {
+    border-color: #525252;
+}

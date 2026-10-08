@@ -70,6 +70,25 @@
     --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
+/* Match the desktop navigation to the article container, including its gutters. */
+@media (min-width: 997px) {
+    .navbar {
+        padding-inline: 0;
+    }
+
+    .navbar__inner {
+        max-width: var(--ifm-container-width);
+        margin-inline: auto;
+        padding-inline: var(--ifm-navbar-padding-horizontal);
+    }
+}
+
+@media (min-width: 1440px) {
+    .navbar__inner {
+        max-width: var(--ifm-container-width-xl);
+    }
+}
+
 .no-margin-p p {
     margin: 0;
 }

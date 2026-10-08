@@ -89,6 +89,8 @@ const config: Config = {
                 //     label: '常用工具',
                 // },
                 { to: '/wechat-official-account', label: '公众号文章', position: 'left' },
+                { type: 'docSidebar', sidebarId: 'curated', label: '谜协严选', position: 'left' },
+                { type: 'custom-calendarNotification', position: 'right' },
                 {
                     href: 'https://github.com/PKUPC/pkupc-info',
                     label: 'GitHub',
@@ -141,12 +143,16 @@ const config: Config = {
                             href: 'https://pnku2.pkupuzzle.art/',
                         },
                         {
-                            label: 'P&KU 3 存档站',
-                            href: 'https://pnku3.pkupuzzle.art/',
+                            label: 'P&KU3（上）存档站',
+                            href: 'https://pnku3a.pkupuzzle.art/home',
                         },
                         {
-                            label: 'P&KU 3 开放游玩环境',
-                            href: 'https://pnku3-playground.pkupuzzle.art/',
+                            label: 'P&KU3（中）开放游玩环境',
+                            href: 'https://pnku3-playground.pkupuzzle.art/home',
+                        },
+                        {
+                            label: '《空悬蛛网》静态版',
+                            href: 'https://pnku3-day4-web.pkupuzzle.art/web',
                         },
                     ],
                 },
