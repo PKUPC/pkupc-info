@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Button, ConfigProvider, Modal, theme } from 'antd';
+import { TaobaoOutlined } from '@ant-design/icons';
 import { useColorMode } from '@docusaurus/theme-common';
 import styles from './styles.module.css';
 
@@ -58,9 +59,14 @@ export default function CalendarPurchase({ imageSrc }: { imageSrc: string }): Re
     };
 
     return (
-        <ConfigProvider theme={{ algorithm: colorMode === 'dark' ? theme.darkAlgorithm : theme.defaultAlgorithm }}>
+        <ConfigProvider
+            theme={{
+                algorithm: colorMode === 'dark' ? theme.darkAlgorithm : theme.defaultAlgorithm,
+                token: { colorPrimary: '#ff5000' },
+            }}
+        >
             <div className={styles.action}>
-                <Button type="primary" size="large" onClick={purchase} loading={launching}>
+                <Button type="primary" size="large" icon={<TaobaoOutlined />} onClick={purchase} loading={launching}>
                     购买2027谜题日历
                 </Button>
             </div>
