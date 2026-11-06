@@ -6,9 +6,7 @@ tags: [mise, winfrid]
 date: 2026-10-02T20:00:00+08:00
 ---
 
-<WechatArticleLink
-  href="https://mp.weixin.qq.com/s?__biz=MzkwMDc0MzAwNw==&mid=2247488741&idx=1&sn=3cfa24c03363c5da06aa89215cde87f2&chksm=c0be3ed5f7c9b7c3ec3455d250b262c6eaf46c56c4c7814bd5243e90a073be91309118f35c6b#rd"
-/>
+<WechatArticleLink href="https://mp.weixin.qq.com/s?__biz=MzkwMDc0MzAwNw==&mid=2247488741&idx=1&sn=3cfa24c03363c5da06aa89215cde87f2&chksm=c0be3ed5f7c9b7c3ec3455d250b262c6eaf46c56c4c7814bd5243e90a073be91309118f35c6b#rd" />
 
 <CustomImage src={require('./mise-099.assets/mise-099.webp').default} alt={'心算题图'} />
 
@@ -16,6 +14,7 @@ date: 2026-10-02T20:00:00+08:00
 
 {/* truncate */}
 
+<AnswerCheck answer={'井水'} exampleAnswer={'土木'} />
 
 ## 提示
 
@@ -27,3 +26,19 @@ date: 2026-10-02T20:00:00+08:00
 </details>
 
 {/* 提示来源：用户提供的公众号回复，口令 261002提示01。 */}
+
+## 解析
+
+<Solution author={'Winfrid'}>
+
+谜题的正确答案是：**井水**。
+
+<CustomImage src={require('./mise-099.assets/mise-099-sol.webp').default} alt={'心算解析图'} />
+
+图中给出了五个数和它们的选项“金木水火土”，要求选出所有平方数后一位数对应的选项。通过一定的数学技巧可以迅速判断出，这五个数里只有“水”符合条件。但是答案却要求我们回答一个词语，说明应该还有别的选项！
+
+事实上，题干里的“上面的数”也包括了题目页眉的数，仔细观察可以发现，本期的期数 99 也是一个符合条件的数，而其前面的“选项”是“#”，也即“井”。从而答案是“井水”。
+
+值得一提的是，除了期数 99 外，发布时间的年月日（2026.10.2）也都符合下面题干里所说的“平方数的后一个数”。所以这题确实是非这一天发出不可呢！
+
+</Solution>
